@@ -1,0 +1,211 @@
+@import "../styles/global.scss";
+
+.container {
+    background-color: $bg-dark-secondary;
+    width: 100%;
+    max-width: 422px;
+    border-radius: 15px;
+
+    .headerSection {
+        padding: 49px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .title {
+            font-size: 16px;
+            font-family: $font-bold;
+            color: #fff;
+        }
+
+        .description {
+            font-size: 12px;
+            color: $bg-gray;
+        }
+
+        .infoGrid {
+            display: flex;
+            gap: 26px;
+            align-items: flex-start;
+
+            .infoRow {
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    font-size: 10px;
+                    color: $bg-gray;
+                }
+            }
+        }
+
+        .statsRow {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .statItem {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                color: $bg-gray;
+
+                .iconBox {
+                    position: relative;
+
+                    svg {
+                        font-size: 12px;
+
+                        &:nth-child(2) {
+                            position: absolute;
+                            right: -3px;
+                            bottom: 0px;
+                            font-size: 10px;
+                            color: $bg-green;
+                        }
+                    }
+                }
+
+                span {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .tagsSection {
+        padding: 49px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .tagsTitle {
+            font-size: 10px;
+            color: $bg-gray;
+        }
+
+        .tagList {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+
+            .tag {
+                background-color: $bg-green;
+                font-size: 10px;
+                font-family: $font-bold;
+                padding: 0px 10px;
+                height: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8px;
+            }
+        }
+    }
+
+    .membersSection {
+        padding: 49px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .membersHeader {
+            display: flex;
+            flex-direction: column;
+            gap: 19px;
+
+            .membersTitle {
+                font-size: 10px;
+                color: $bg-gray;
+            }
+
+            .membersWrapper {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                flex-wrap: wrap;
+
+                .membersList {
+                    display: flex;
+
+                    .memberAvatar {
+                        width: 39px;
+                        height: 39px;
+                        border-radius: 50%;
+                        border: 2px solid #232323;
+                    }
+
+                    .moreMembersButton {
+                        width: 39px;
+                        height: 39px;
+                        background-color: $bg-gray;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 10px;
+                        font-family: $font-bold;
+                    }
+                }
+
+                .membersToggleButton {
+                    min-width: 39px;
+                    min-height: 39px;
+                    background-color: $bg-green;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    svg {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        .moderatorsSection {
+            display: flex;
+            flex-direction: column;
+            gap: 19px;
+
+            .moderatorsTitle {
+                font-size: 10px;
+                color: $bg-gray;
+            }
+
+            .moderatorItem {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .moderatorAvatar {
+                    width: 39px;
+                    height: 39px;
+                    border-radius: 50%;
+                }
+
+                .moderatorInfo {
+                    display: flex;
+                    flex-direction: column;
+                    color: $bg-gray;
+
+                    .moderatorName {
+                        font-size: 12px;
+                        font-family: $font-bold;
+                    }
+
+                    .moderatorRole {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .divider {
+        height: 1px;
+        width: 100%;
+        background-color: $bg-dark;
+    }
+}

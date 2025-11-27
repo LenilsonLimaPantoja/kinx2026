@@ -1,0 +1,123 @@
+/* Container principal do footer */
+.area_footer {
+    width: 100%;
+    background: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 173px 0px;
+
+    .footerContainer {
+        width: 100%;
+        max-width: 1184px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 128px;
+
+        .footerLeft {
+            display: flex;
+            flex-direction: column;
+            gap: 38px;
+
+            .footerLogo {
+                width: 212px;
+                height: 61px;
+            }
+
+            .footerFollowText {
+                font-size: 20px;
+                color: #707070;
+            }
+
+            .footerSocialIcons {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+
+                svg {
+                    font-size: 28px;
+                    color: #707070;
+                    cursor: pointer;
+                    transition: .5s ease-in-out;
+
+                    &:hover {
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+
+        .footerRight {
+            display: flex;
+            flex-direction: column;
+            gap: 72px;
+
+            .footerLinksWrapper {
+                display: flex;
+                gap: 72px;
+
+                .footerLinksSection {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 37px;
+
+                    .footerSectionTitle {
+                        font-family: 'AlteHaasGroteskBold';
+                        font-size: 20px;
+                        color: #fff;
+                    }
+
+                    .footerLink {
+                        font-size: 20px;
+                        color: #707070;
+                        cursor: pointer;
+                        transition: .5s ease-in-out;
+
+                        &:hover {
+                            opacity: .5;
+                        }
+                    }
+                }
+            }
+
+            .footerBottomSection {
+                display: flex;
+                flex-direction: column;
+                gap: 36px;
+                width: 100%;
+                max-width: 650px;
+
+                .footerCopyright {
+                    font-family: 'AlteHaasGroteskBold';
+                    font-size: 20px;
+                    color: #fff;
+                }
+
+                .footerDisclaimer {
+                    font-size: 13px;
+                    color: #707070;
+                }
+
+                .footerLegalLinks {
+                    display: flex;
+                    align-items: center;
+                    gap: 72px;
+
+                    .footerLegalLink {
+                        font-family: 'AlteHaasGroteskBold';
+                        font-size: 15px;
+                        color: #fff;
+                        cursor: pointer;
+                        transition: .5s ease-in-out;
+
+                        &:hover {
+                            opacity: .5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

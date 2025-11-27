@@ -1,0 +1,104 @@
+.header {
+    width: 100%;
+    max-width: 1184px;
+    height: 70px;
+    padding: 0px 20px 0px 47px;
+    border-radius: 15px;
+    background-color: #262626;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 69px;
+
+    .header_logo {
+        width: 76px;
+        height: 22px;
+    }
+
+    .header_nav {
+        flex-grow: 1;
+        display: flex;
+        list-style: none;
+        align-items: center;
+        color: #707070;
+        gap: 27px;
+
+        .header_navItem {
+            cursor: pointer;
+            font-size: 14px;
+            transition: .5s ease-in-out;
+
+            &:hover {
+                opacity: .5;
+            }
+
+
+        }
+
+        .active {
+            color: #fff;
+        }
+    }
+
+    .header_actions {
+        display: flex;
+        gap: 40px;
+
+        .header_btnRegister,
+        .header_btnLogin {
+            background-color: transparent;
+            width: 127px;
+            height: 35px;
+            border: none;
+            color: #fff;
+            font-family: 'AlteHaasGroteskBold';
+            font-size: 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: .5s ease-in-out;
+
+            &:hover {
+                opacity: .5;
+            }
+
+            &:nth-child(2) {
+                background-color: #CBFB45;
+                color: #000;
+                font-size: 15px;
+                width: 90px;
+            }
+        }
+
+        .header_btnMenu {
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            display: none;
+
+            svg {
+                font-size: 35px;
+            }
+        }
+    }
+
+    @media (max-width: 1050px) {
+        padding: 20px;
+
+        .header_nav {
+            display: none;
+        }
+
+        .header_actions {
+            gap: 20px;
+
+            .header_btnRegister {
+                display: none;
+            }
+
+            .header_btnMenu {
+                display: flex;
+            }
+        }
+    }
+}
