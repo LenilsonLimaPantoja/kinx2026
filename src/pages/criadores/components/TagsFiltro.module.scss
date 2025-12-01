@@ -1,0 +1,74 @@
+@import '../../../styles/global.scss';
+
+.tags_filtro {
+    width: 100%;
+    max-width: 1184px;
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    anchor-name: --carousel;
+    scrollbar-width: none;
+
+    .tag {
+        height: 23px;
+        border-radius: 12px;
+        border: 1px solid $bg-gray;
+        background-color: transparent;
+        font-size: 15px;
+        padding: 0px 19px;
+        color: $bg-gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &::scroll-button(right),
+    &::scroll-button(left) {
+        content: '>';
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $bg-gray;
+        font-family: Consolas;
+        font-size: 20px;
+        color: #fff;
+        height: 23px;
+        width: 23px;
+        border-radius: 50%;
+        padding-bottom: .1em;
+        cursor: pointer;
+        position: fixed;
+        position-anchor: --carousel;
+        position-area: right center;
+        translate: -100%;
+    }
+
+    /* seta esquerda (conteúdo e área) */
+    &::scroll-button(left) {
+        content: '<';
+        position-area: left center;
+        /* encostado à esquerda */
+        translate: 100%;
+    }
+
+    &::scroll-button(right):disabled,
+    &::scroll-button(left):disabled {
+        opacity: .5;
+        cursor: auto;
+    }
+
+    .tag_selected {
+        background-color: $bg-green;
+        border-color: transparent;
+        color: #000;
+    }
+}

@@ -1,0 +1,72 @@
+@import '../../../styles/global.scss';
+
+.form_filtro {
+    display: flex;
+    gap: 11px;
+    width: 100%;
+    max-width: 1184px;
+
+    .select_genero,
+    .input_filtro {
+        display: flex;
+        align-items: center;
+        background-color: $bg-gray-terciary;
+        width: 209px;
+        height: 52px;
+        border-radius: 8px;
+        padding: 0px 19px;
+        gap: 13px;
+        color: #fff;
+
+        svg {
+            font-size: 25px;
+        }
+
+        select {
+            height: 100%;
+            font-size: 15px;
+            color: #fff;
+            flex-grow: 1;
+            background-color: $bg-gray-terciary;
+            outline: none;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    .input_filtro {
+        max-width: 532px;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        color: $bg-gray;
+        padding: 6px 6px 6px 28px;
+
+        svg {
+            font-size: 22px;
+        }
+
+        input {
+            height: 100%;
+            flex-grow: 1;
+            background-color: transparent;
+            color: $bg-gray;
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 85px;
+            height: 40px;
+            border-radius: 8px;
+            background-color: $bg-green;
+            font-family: $font-bold;
+        }
+
+    }
+}

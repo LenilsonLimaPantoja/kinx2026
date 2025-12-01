@@ -2,21 +2,21 @@ import styles from './Header.module.scss';
 import user from '../arquivos/user.png';
 import logo_green from '../arquivos/logo_green.png';
 import icones from '../assets/icones';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Header = ({ logado }) => {
-    const [menuAtivo, setMenuAtivo] = useState(1);
+    const location = useLocation()
     const navigation = useNavigate();
+    const rota = "/" + location.pathname.split("/")[1];
+
     const menu = [
-        { descricao: 'Home', id: 1, rota: '/' },
-        { descricao: 'Criadores', id: 2, rota: '/' },
-        { descricao: 'Darkrooms', id: 3, rota: '/' },
-        { descricao: 'Eventos', id: 4, rota: '/' },
-        { descricao: 'Suporte', id: 5, rota: '/' }
+        { descricao: 'Home', id: 1, rota: '/', selected: rota === "/" ? true : false },
+        { descricao: 'Criadores', id: 2, rota: '/criadores', selected: rota === "/criadores" ? true : false },
+        { descricao: 'Darkrooms', id: 3, rota: '/darkrooms', selected: rota === "/darkrooms" ? true : false },
+        { descricao: 'Eventos', id: 4, rota: '/eventos', selected: rota === "/eventos" ? true : false },
+        { descricao: 'Suporte', id: 5, rota: '/suporte', selected: rota === "/suporte" ? true : false }
     ]
     const handleMenu = (rota, id) => {
-        if (id) setMenuAtivo(id);
         navigation(rota);
     }
     return (
@@ -27,8 +27,8 @@ const Header = ({ logado }) => {
                 {menu?.map((item) => (
                     <li
                         key={item?.id}
-                        onClick={() => handleMenu(item.rota, item?.id)}
-                        className={`${styles.header_navItem} ${menuAtivo == item?.id ? styles.active : ''}`}
+                        onClick={() => handleMenu(item.rota)}
+                        className={`${styles.header_navItem} ${item?.selected ? styles.active : ''}`}
                     >
                         {item?.descricao}
                     </li>

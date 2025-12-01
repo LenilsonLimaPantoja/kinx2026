@@ -1,0 +1,20 @@
+@import '../../../styles/global.scss';
+
+.ExplorarCriadores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+
+    .area_criadores {
+        width: 100%;
+        max-width: 1184px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+        padding: 0px 47px;
+    }
+}
