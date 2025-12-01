@@ -33,7 +33,7 @@ const DarkroomCommunity = () => {
     return (
         <div className={styles.container_feed_principal}>
             {/* aqui eu devo fazer um ajuste, pois o cabeçalho não é esse */}
-            <Header />
+            <Header logado={true}/>
             <TipoDarkroom />
             <EventosPrincipais />
             <FeedNavbar btnAtivo={btnAtivo} setBtnAtivo={setBtnAtivo} botoes={botoes} />

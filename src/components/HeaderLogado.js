@@ -1,11 +1,10 @@
-import styles from './Header.module.scss';
-import user from '../arquivos/user.png';
+import styles from './HeaderLogado.module.scss';
 import logo_green from '../arquivos/logo_green.png';
 import icones from '../assets/icones';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Header = ({ logado }) => {
+const HeaderLogado = ({ logado }) => {
     const [menuAtivo, setMenuAtivo] = useState(1);
     const navigation = useNavigate();
     const menu = [
@@ -39,7 +38,7 @@ const Header = ({ logado }) => {
                 <div className={styles.user_card}>
                     <button className={styles.user_card_left}>
                         <div className={styles.user_card_avatar_area}>
-                            <img className={styles.user_card_avatar} src={user} alt="Imagem de usuário" />
+                            <img className={styles.user_card_avatar} src="https://cdn-icons-png.flaticon.com/512/236/236832.png" alt="" />
                         </div>
                         <div className={styles.user_card_info}>
                             <span className={styles.user_card_name}>@Usernovo</span>
@@ -72,4 +71,4 @@ const Header = ({ logado }) => {
         </div>
     )
 }
-export default Header;
+export default HeaderLogado;

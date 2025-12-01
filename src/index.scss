@@ -30,6 +30,7 @@ code {
   font-family: 'AlteHaasGroteskRegular', sans-serif;
 }
 
+/* --- Chrome, Edge, Safari, Opera --- */
 ::-webkit-scrollbar {
   height: 8px;
   width: 8px;
@@ -42,7 +43,12 @@ code {
 ::-webkit-scrollbar-thumb {
   background: #CBFB45;
   border-radius: 20px;
-  cursor: pointer;
+}
+
+/* --- Firefox --- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #CBFB45 #232325;
 }
 
 button,
