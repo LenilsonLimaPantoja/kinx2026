@@ -25,7 +25,7 @@
             position: relative;
 
             svg {
-                font-size: 20px;
+                font-size: 23px;
             }
 
             span {
@@ -35,7 +35,7 @@
 
             strong {
                 height: 13px;
-                width: 13px;
+                min-width: 13px;
                 border-radius: 50%;
                 background-color: $bg-red-primary;
                 position: absolute;

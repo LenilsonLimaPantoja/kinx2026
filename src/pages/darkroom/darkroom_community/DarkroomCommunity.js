@@ -10,6 +10,7 @@ import EventosFeed from './components/EventosFeed';
 import FeedNavbar from '../../../components/FeedNavbar';
 import Header from '../../../components/Header';
 import PostsCards from '../../../components/PostsCards';
+import icones from '../../../assets/icones';
 
 const DarkroomCommunity = () => {
     const [btnAtivo, setBtnAtivo] = useState(1);
@@ -22,7 +23,7 @@ const DarkroomCommunity = () => {
             ],
             right: [
                 { titulo: "Novo Post", id: 1, icone: <MdAdd />, flutuante: null, funcao: () => handleDesenvolvimento("NOVO POST") },
-                { titulo: "", id: 2, icone: <BiChat />, flutuante: 2, funcao: () => handleDesenvolvimento("CHAT") },
+                { titulo: "", id: 2, icone: icones.chat, flutuante: 2, funcao: () => handleDesenvolvimento("CHAT") },
             ]
         }
     ];
