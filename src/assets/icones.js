@@ -2,7 +2,7 @@ import { CgList } from "react-icons/cg";
 import { FaInstagram, FaRegCircleCheck, FaTelegram, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
 import { FiLogIn } from "react-icons/fi";
 import { GoKebabHorizontal } from "react-icons/go";
-import { HiOutlineHeart, HiRefresh } from "react-icons/hi";
+import { HiHeart, HiOutlineHeart, HiRefresh } from "react-icons/hi";
 import { IoMdStar } from "react-icons/io";
 import { LuBookmark, LuUserRound, LuUsers } from "react-icons/lu";
 import { MdLockOutline } from "react-icons/md";
@@ -29,6 +29,7 @@ const icones = {
     "telegram": <FaTelegram />,
     "temporario": <RxCounterClockwiseClock />,
     "gostei": <HiOutlineHeart />,
+    "gostei_clicado": <HiHeart color="#FF0000" />,
     "comentario": <RiChatAiLine />,
     "refresh": <HiRefresh />,
     "estrela": <IoMdStar />

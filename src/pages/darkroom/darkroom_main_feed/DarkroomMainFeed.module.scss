@@ -1,0 +1,13 @@
+@import '../../../styles/global.scss';
+
+.container_feed_principal {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    align-items: center;
+
+    .area_body {
+        display: flex;
+        gap: 46px;
+    }
+}

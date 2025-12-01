@@ -1,0 +1,191 @@
+@import '../../../../styles/global.scss';
+
+.card_agora {
+    background-color: $bg-dark-secondary;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    border-radius: 15px;
+    padding: 14px 36px 26px 36px;
+    transition: .5s ease-in-out;
+    border: solid 1px transparent;
+
+    &:hover {
+        border-color: $bg-green;
+    }
+
+    .card_agora_topo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 18px;
+
+        .card_agora_topo_left {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+
+            img {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .left_titulo {
+                font-family: 'AlteHaasGroteskBold';
+                font-size: 14px;
+                color: $bg-gray-b;
+            }
+
+            svg {
+                color: $bg-gray-b;
+                font-size: 10px;
+            }
+
+            .left_acesso_tempo {
+                font-size: 10px;
+                color: $bg-gray;
+            }
+        }
+
+        .card_agora_topo_right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+
+            button {
+                background-color: $bg-dark;
+                height: 42px;
+                padding: 0px 10px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                span {
+                    font-size: 20px;
+                    color: #fff;
+                }
+
+                svg {
+                    font-size: 18px;
+                    color: $bg-green;
+                    border: dashed 2px $bg-green;
+                    padding: 2px;
+                    border-radius: 5px;
+                }
+
+                &:nth-child(2) {
+                    width: 42px;
+                    justify-content: center;
+                    align-items: center;
+
+                    svg {
+                        font-size: 18px;
+                        border: none;
+                        padding: 0px;
+                        border-radius: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    .titulo_evento {
+        font-size: 16px;
+        font-family: $font-bold;
+        color: #fff;
+    }
+
+    .card_agora_paragrafo {
+        font-size: 16px;
+        color: $bg-gray;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .card_agora_tags {
+        display: flex;
+        gap: 3px;
+        align-items: center;
+
+        span {
+            background-color: $bg-green;
+            font-family: 'AlteHaasGroteskBold';
+            font-size: 8px;
+            height: 15px;
+            padding: 0px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+        }
+    }
+
+    .card_agora_img_area {
+        width: 100%;
+        height: 317px;
+        border-radius: 15px;
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+
+    .card_agora_bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+
+        .card_agora_bottom_left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .card_agora_bottom_left_curtida_coment {
+                color: $bg-gray;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                transition: .5s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: .5;
+                }
+
+                svg {
+                    font-size: 22px;
+                }
+
+                span {
+                    font-family: 'AlteHaasGroteskBold';
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .card_agora_bottom_icone_menu {
+            color: $bg-gray;
+            border: solid 2px $bg-gray;
+            height: 22px;
+            width: 22px;
+            padding: 2px;
+            border-radius: 50%;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

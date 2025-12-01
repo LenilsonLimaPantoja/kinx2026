@@ -1,3 +1,5 @@
+@import '../styles/global.scss';
+
 .header {
     width: 100%;
     max-width: 1184px;
@@ -51,7 +53,7 @@
             height: 35px;
             border: none;
             color: #fff;
-            font-family: 'AlteHaasGroteskBold';
+            font-family: $font-bold;
             font-size: 14px;
             border-radius: 8px;
             cursor: pointer;

@@ -1,26 +1,42 @@
 import styles from './Header.module.scss';
 import logo_green from '../arquivos/logo_green.png';
 import icones from '../assets/icones';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-    const handleDesenvolvimento = (texto) => {
-        alert(`Funcionalidade de "${texto}" em desenvolvimento.`);
+    const [menuAtivo, setMenuAtivo] = useState(1);
+    const navigation = useNavigate();
+    const menu = [
+        { descricao: 'Home', id: 1, rota: '/' },
+        { descricao: 'Criadores', id: 2, rota: '/' },
+        { descricao: 'Darkrooms', id: 3, rota: '/' },
+        { descricao: 'Eventos', id: 4, rota: '/' },
+        { descricao: 'Suporte', id: 5, rota: '/' }
+    ]
+    const handleMenu = (rota, id) => {
+        if (id) setMenuAtivo(id);
+        navigation(rota);
     }
     return (
         <div className={styles.header}>
             <img src={logo_green} alt='Logo Kinx' className={styles.header_logo} />
 
             <ul className={styles.header_nav}>
-                <li onClick={() => handleDesenvolvimento('HOME')} className={styles.header_navItem}>Home</li>
-                <li onClick={() => handleDesenvolvimento("CRIADORES")} className={styles.header_navItem}>Criadores</li>
-                <li onClick={() => handleDesenvolvimento("DARKROOMS")} className={styles.header_navItem}>Darkrooms</li>
-                <li onClick={() => handleDesenvolvimento("EVENTOS")} className={styles.header_navItem}>Eventos</li>
-                <li onClick={() => handleDesenvolvimento("SUPORTE")} className={`${styles.header_navItem} ctive}`}>Suporte</li>
+                {menu?.map((item) => (
+                    <li
+                        key={item?.id}
+                        onClick={() => handleMenu(item.rota, item?.id)}
+                        className={`${styles.header_navItem} ${menuAtivo == item?.id ? styles.active : ''}`}
+                    >
+                        {item?.descricao}
+                    </li>
+                ))}
             </ul>
 
             <div className={styles.header_actions}>
-                <button className={styles.header_btnRegister} onClick={() => handleDesenvolvimento("REGISTRAR-SE")}>Registre-se Agora!</button>
-                <button className={styles.header_btnLogin} onClick={() => handleDesenvolvimento("MENU DRAWER")}>Entrar</button>
+                <button className={styles.header_btnRegister} onClick={() => handleMenu("REGISTRAR-SE")}>Registre-se Agora!</button>
+                <button className={styles.header_btnLogin} onClick={() => handleMenu("MENU DRAWER")}>Entrar</button>
                 <button className={styles.header_btnMenu}>
                     {icones.menu}
                 </button>

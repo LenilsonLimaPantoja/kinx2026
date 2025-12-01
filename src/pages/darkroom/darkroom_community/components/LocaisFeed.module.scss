@@ -1,0 +1,20 @@
+@import '../../../../styles/global.scss';
+
+.darkrooms_populares_agora {
+    height: 100%;
+    width: 100%;
+    max-width: 717px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+
+    .tituloSection {
+        font-size: 20px;
+        color: $bg-gray;
+
+        strong {
+            color: #fff;
+            font-family: $font-bold;
+        }
+    }
+}

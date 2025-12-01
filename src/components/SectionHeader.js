@@ -1,8 +1,7 @@
 import Header from './Header';
 import styles from './SectionHeader.module.scss';
-import icones from '../assets/icones';
 
-const SectionHeader = () => {
+const SectionHeader = ({ texto, textoBold, icone, description }) => {
     const handleDesenvolvimento = (texto) => {
         alert(`Funcionalidade de "${texto}" em desenvolvimento.`);
     }
@@ -13,17 +12,17 @@ const SectionHeader = () => {
             <div className={styles.sectionContent}>
                 <div className={styles.titleRow}>
                     <span className={styles.locationText}>
-                        Darkrooms de <strong>São Paulo - SP</strong>
+                        {texto}<strong>{textoBold}</strong>
                     </span>
 
-                    <button className={styles.refreshButton} onClick={() => handleDesenvolvimento("CIDADE")}>
-                        {icones.refresh}
-                    </button>
+                    {icone &&
+                        <button className={styles.refreshButton} onClick={() => handleDesenvolvimento("CIDADE")}>
+                            {icone}
+                        </button>
+                    }
                 </div>
 
-                <p className={styles.description}>
-                    Um ambiente exclusivo para quem deseja trocar experiências, compartilhar interesses e explorar novas possibilidades com discrição.
-                </p>
+                <p className={styles.description}>{description}</p>
             </div>
         </div>
     )

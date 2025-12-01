@@ -1,0 +1,36 @@
+@import '../../../../styles/global.scss';
+
+.DarkroomMap {
+    width: 720px;
+    height: 633px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    position: relative;
+    overflow: hidden;
+
+    .btnExpandir {
+        width: 43px;
+        height: 43px;
+        border-radius: 10px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 17px;
+        left: 17px;
+        z-index: 1;
+
+        svg {
+            font-size: 30px;
+        }
+    }
+
+    .mapa {
+        width: 100%;
+        height: 633px;
+    }
+}

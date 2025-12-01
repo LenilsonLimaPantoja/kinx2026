@@ -1,0 +1,58 @@
+@import '../styles/global.scss';
+
+.feedNavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1184px;
+
+    .navTabs,
+    .rightActions {
+        display: flex;
+        gap: 10px;
+
+        .tabButton {
+            height: 44px;
+            max-height: 44px;
+            border-radius: 8px;
+            background-color: $bg-green;
+            padding: 0px 17px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            position: relative;
+
+            svg {
+                font-size: 20px;
+            }
+
+            span {
+                font-size: 20px;
+                font-family: $font-bold;
+            }
+
+            strong {
+                height: 13px;
+                width: 13px;
+                border-radius: 50%;
+                background-color: $bg-red-primary;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                font-size: 10px;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .tabButtonInativo {
+            background-color: transparent;
+            color: $bg-gray;
+            background-color: $bg-dark-primary;
+        }
+    }
+}

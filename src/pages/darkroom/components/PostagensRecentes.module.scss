@@ -1,0 +1,103 @@
+@import '../../../styles/global.scss';
+
+.home_area_postagens {
+    width: 100%;
+    max-width: 422px;
+
+    .home_postagens {
+        background-color: $bg-dark-secondary;
+        border-radius: 15px;
+
+        .home_postagens_area_top {
+            padding: 34px;
+
+            span {
+                font-size: 16px;
+                color: $bg-gray;
+
+            }
+        }
+
+        .home_postagens_linha_dividir {
+            height: 1px;
+            width: 100%;
+            background-color: $bg-dark;
+        }
+
+        .home_postagens_card {
+            padding: 37px;
+            display: flex;
+            gap: 41px;
+            cursor: pointer;
+            transition: .5s ease-in-out;
+
+            &:hover {
+                opacity: .5;
+            }
+
+            .home_postagens_card_body {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                flex-grow: 1;
+
+                .home_postagens_card_body_top {
+                    display: flex;
+                    align-items: center;
+                    gap: 9px;
+
+                    img {
+                        width: 21px;
+                        height: 21px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    .card_titulo {
+                        font-family: $font-bold;
+                        font-size: 10px;
+                        color: $bg-gray-b;
+                    }
+
+                    svg {
+                        color: $bg-gray-b;
+                        font-size: 10px;
+                    }
+
+                    .card_tempo_atividade {
+                        font-size: 10px;
+                        color: $bg-gray;
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                    color: $bg-gray;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .home_postagens_card_body_bottom {
+                    display: flex;
+                    gap: 20px;
+
+                    span {
+                        font-size: 10px;
+                        color: $bg-gray;
+                    }
+                }
+
+            }
+
+            .home_postagens_card_img_right {
+                width: 136px;
+                height: 112px;
+                border-radius: 8px;
+                object-fit: cover;
+            }
+        }
+    }
+}
