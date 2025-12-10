@@ -4,6 +4,7 @@ import icones from '../../../assets/icones';
 import FormFiltro from '../components/FormFiltro';
 import TagsFiltro from '../components/TagsFiltro';
 import Destaques from '../components/Destaques';
+import Criadores from '../components/Criadores';
 
 const ExplorarCriadores = () => {
     return (
@@ -19,6 +20,7 @@ const ExplorarCriadores = () => {
                 <TagsFiltro />
             </div>
             <Destaques />
+            <Criadores />
         </div>
     )
 }

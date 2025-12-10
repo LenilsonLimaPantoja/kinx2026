@@ -1,0 +1,16 @@
+@import '../../../styles/global.scss';
+
+.container_criadores {
+    width: 100%;
+    max-width: 1184px;
+
+    .cards_list {
+        .card {
+            width: 454px;
+            height: 234px;
+            border-radius: 20px;
+
+            .area_card {}
+        }
+    }
+}
