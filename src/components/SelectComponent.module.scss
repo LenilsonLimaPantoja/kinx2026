@@ -1,0 +1,52 @@
+@import '../styles/global.scss';
+
+.opt {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    background-color: $bg-gray-terciary;
+    height: auto;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    max-height: 400px;
+
+    button {
+        font-size: 15px;
+        color: #fff;
+        flex-grow: 1;
+        background-color: transparent;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: solid 1px $bg-gray;
+
+        span {
+            font-size: 15px;
+        }
+
+        svg {
+            font-size: 20px;
+        }
+
+        &:nth-child(1) {
+            background-color: $bg-green;
+
+            span,
+            svg {
+                color: #000;
+            }
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+
+    }
+}

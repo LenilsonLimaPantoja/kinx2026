@@ -1,16 +1,130 @@
 @import '../../../styles/global.scss';
 
-.container_criadores {
-    width: 100%;
+.containerCriadores {
     max-width: 1184px;
 
-    .cards_list {
+    .cardsList {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 933px;
+
+        .areaTituloList {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 100%;
+            margin: 50px 0px;
+
+            .tituloList {
+                font-size: 20px;
+                color: #fff;
+                font-family: $font-bold;
+            }
+
+            .subTituloList {
+                color: $bg-gray;
+                font-size: 13px;
+            }
+        }
+
         .card {
-            width: 454px;
+            width: 100%;
+            max-width: 454px;
             height: 234px;
             border-radius: 20px;
+            display: flex;
+            padding: 15px;
+            cursor: pointer;
+            transition: .5s ease-in-out;
 
-            .area_card {}
+            &:hover {
+                opacity: .5;
+            }
+
+            .cardContent {
+                backdrop-filter: blur(6.800000190734863px);
+                background: #232323AD;
+                border-radius: 20px;
+                display: flex;
+                padding: 30px;
+                gap: 40px;
+                align-items: center;
+
+                .cardLeft {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    .cardImage {
+                        width: 100px;
+                        height: 100px;
+                        background-color: $bg-green;
+                        padding: 5px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+
+                    .cardStats {
+                        color: #fff;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+
+                        .statItem {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+
+                            .statIcon {
+                                font-size: 15px;
+                            }
+
+                            .statText {
+                                font-size: 13px;
+                                display: flex;
+                                align-items: center;
+                                gap: 5px;
+
+                                .statValue {}
+                            }
+                        }
+                    }
+                }
+
+                .cardRight {
+                    display: flex;
+                    flex-direction: column;
+                    color: #fff;
+                    gap: 10px;
+
+                    .creatorInfo {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+
+                        .creatorUsername {
+                            font-size: 24px;
+                        }
+
+                        .creatorName {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .creatorDescription {
+                        font-size: 12px;
+                    }
+
+                    .creatorLocation {
+                        font-size: 13px;
+                    }
+                }
+
+            }
         }
     }
 }

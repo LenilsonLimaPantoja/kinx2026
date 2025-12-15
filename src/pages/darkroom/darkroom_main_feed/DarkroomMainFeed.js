@@ -1,5 +1,5 @@
 import styles from './DarkroomMainFeed.module.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { TbCompass } from 'react-icons/tb';
 import DarkroomsPoluares from './components/DarkroomsPoluares';
 import PostagensRecentes from '../components/PostagensRecentes';
@@ -7,9 +7,18 @@ import DarkroonsLista from './components/DarkroonsLista';
 import FeedNavbar from '../../../components/FeedNavbar';
 import PostsCards from '../../../components/PostsCards';
 import SectionHeader from '../../../components/SectionHeader';
+import Loading from '../../../components/Loading';
 
 const DarkroomMainFeed = () => {
     const [btnAtivo, setBtnAtivo] = useState(1);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+    }, []);
+
     const botoes = [
         {
             left: [
@@ -24,8 +33,12 @@ const DarkroomMainFeed = () => {
     const handleDesenvolvimento = (texto) => {
         alert(`Funcionalidade de "${texto}" em desenvolvimento.`);
     }
+
     return (
         <div className={styles.container_feed_principal}>
+            {loading &&
+                <Loading />
+            }
             <SectionHeader
                 texto="Darkrooms "
                 textoBold="Straight"

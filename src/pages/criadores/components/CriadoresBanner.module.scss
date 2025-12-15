@@ -1,0 +1,203 @@
+@import '../../../styles/global.scss';
+
+.creator {
+    background-color: blue;
+    padding: 30px;
+    width: 100%;
+    border-radius: 15px;
+    height: 311px;
+    background-image: url("../components/criadores/fundo1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .creator_container {
+        display: flex;
+        align-items: center;
+        background: #0000006B;
+        border-radius: 15px;
+        backdrop-filter: blur(20px);
+        padding: 0px 27px 0px 49px;
+        gap: 49px;
+        height: 100%;
+
+        .creator_header {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+
+            .creator_avatar {
+                position: relative;
+
+                .creator_avatar_img {
+                    width: 132px;
+                    height: 132px;
+                    padding: 5px;
+                    border-radius: 50%;
+                    background-color: #CBFB45;
+                    object-fit: cover;
+                }
+
+                .creator_verified {
+                    color: #49adf4;
+                    position: absolute;
+                    bottom: 5px;
+                    right: 5px;
+                    font-size: 30px;
+                }
+            }
+
+            .creator_stat {
+                display: flex;
+                color: #fff;
+                align-items: center;
+                gap: 5px;
+
+                svg {
+                    font-size: 12px;
+                }
+
+                &:nth-child(3) {
+                    svg {
+                        font-size: 13px;
+                    }
+                }
+
+                .creator_stat_info {
+                    font-size: 10px;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    strong {
+                        font-family: $font-bold;
+                    }
+
+                    span {}
+                }
+            }
+        }
+
+        .creator_info {
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            .creator_names {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .creator_username {
+                    font-size: 24px;
+                    font-family: $font-bold;
+                }
+
+                .creator_name {
+                    font-size: 12px;
+                }
+            }
+
+            .creator_bio {
+                font-size: 12px;
+            }
+
+            .creator_location {
+                font-size: 12px;
+                font-family: $font-bold;
+            }
+
+            .creator_numbers {
+                display: flex;
+                gap: 30px;
+
+                .creator_number_item {
+                    display: flex;
+                    gap: 8px;
+                    font-size: 12px;
+                    align-items: center;
+
+                    svg {
+                        font-size: 15px;
+                    }
+
+                    div {
+                        display: flex;
+                        gap: 5px;
+
+                        strong {}
+
+                        span {}
+                    }
+                }
+            }
+        }
+
+        .creator_actions {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-bottom: 27px;
+
+            .creator_subscribe {
+                width: 161px;
+                height: 68px;
+                border-bottom-right-radius: 8px;
+                border-bottom-left-radius: 8px;
+                background-color: $bg-green;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    font-size: 10px;
+
+                    &:nth-child(2) {
+                        font-size: 20px;
+                        font-family: $font-bold;
+                    }
+                }
+            }
+
+            .creator_more {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .creator_country {
+                    width: 30px;
+                    height: 21px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: .5s ease-in-out;
+
+                    &:hover {
+                        opacity: .7;
+                    }
+                }
+
+                svg {
+                    color: #fff;
+                    height: 21px;
+                    width: 21px;
+                    border: solid 2px #fff;
+                    border-radius: 50%;
+                    padding: 2px;
+                    cursor: pointer;
+                    transition: .5s ease-in-out;
+
+                    &:hover {
+                        opacity: .7;
+                    }
+                }
+            }
+        }
+    }
+}

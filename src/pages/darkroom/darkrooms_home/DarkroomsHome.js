@@ -3,10 +3,23 @@ import TopicosAlta from './components/TopicosAlta';
 import PostagensRecentes from '../components/PostagensRecentes';
 import SectionHeader from '../../../components/SectionHeader';
 import icones from '../../../assets/icones';
+import { useEffect, useState } from 'react';
+import Loading from '../../../components/Loading';
 
 const DarkroomsHome = () => {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+    }, []);
+
     return (
         <div className={styles.container_feed_principal}>
+            {loading &&
+                <Loading />
+            }
             <SectionHeader
                 icone={icones.refresh}
                 texto="Darkrooms de "

@@ -1,15 +1,20 @@
+import { BiDonateHeart, BiUserPin } from "react-icons/bi";
 import { CgList } from "react-icons/cg";
 import { FaInstagram, FaRegCircleCheck, FaTelegram, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
 import { FiLogIn } from "react-icons/fi";
 import { GoKebabHorizontal } from "react-icons/go";
+import { GrLocation } from "react-icons/gr";
 import { HiHeart, HiOutlineHeart, HiRefresh } from "react-icons/hi";
 import { IoMdStar } from "react-icons/io";
-import { LuBookmark, LuUserRound, LuUsers } from "react-icons/lu";
-import { MdLockOutline } from "react-icons/md";
-import { PiChats } from "react-icons/pi";
+import { IoPlayOutline } from "react-icons/io5";
+import { LuBookmark, LuEye, LuUserRound, LuUsers } from "react-icons/lu";
+import { MdLockOutline, MdOutlineChevronRight, MdOutlineClose, MdOutlineImage } from "react-icons/md";
+import { PiChats, PiHandHeartBold } from "react-icons/pi";
 import { RiChatAiLine, RiFireLine, RiMenuLine } from "react-icons/ri";
 import { RxCounterClockwiseClock } from "react-icons/rx";
+import { SlPresent } from "react-icons/sl";
 import { TbPointFilled } from "react-icons/tb";
+import { VscVerifiedFilled } from "react-icons/vsc";
 
 
 const icones = {
@@ -34,7 +39,17 @@ const icones = {
     "comentario": <RiChatAiLine />,
     "refresh": <HiRefresh />,
     "estrela": <IoMdStar />,
-    "chat": <PiChats />
+    "chat": <PiChats />,
+    "olho": <LuEye />,
+    "assinantes": <BiUserPin />,
+    "close": <MdOutlineClose />,
+    "right": <MdOutlineChevronRight />,
+    "verifie": <VscVerifiedFilled />,
+    "imagem": <MdOutlineImage />,
+    "play": <IoPlayOutline />,
+    "seguindo": <BiDonateHeart />,
+    "location": <GrLocation />,
+    "presente": <SlPresent/>
 
 }
 

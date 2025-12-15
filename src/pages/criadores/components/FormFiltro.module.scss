@@ -17,23 +17,22 @@
         padding: 0px 19px;
         gap: 13px;
         color: #fff;
+        position: relative;
+        cursor: pointer;
 
         svg {
             font-size: 25px;
         }
 
-        select {
+        span {
             height: 100%;
             font-size: 15px;
             color: #fff;
             flex-grow: 1;
-            background-color: $bg-gray-terciary;
-            outline: none;
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            border: none;
-            cursor: pointer;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
         }
     }
 

@@ -10,6 +10,7 @@ import avatar4 from './destaques/avatar4.png';
 import fundo2 from './destaques/fundo2.png';
 import fundo3 from './destaques/fundo3.png';
 import fundo4 from './destaques/fundo4.png';
+import { useNavigate } from 'react-router-dom';
 
 const arrayList = [
     {
@@ -76,6 +77,7 @@ const arrayList = [
 
 const Destaques = () => {
     const scrollRef = useRef(null);
+    const navigation = useNavigate();
     const [destaques, setDestaques] = useState(arrayList);
     const onMouseDown = (e) => {
         const slider = scrollRef.current;
@@ -122,6 +124,7 @@ const Destaques = () => {
         <div className={styles.destaques}>
             <span className={styles.destaques_titulo}>Destaques:</span>
             <div
+                onClick={() => navigation('/criadores/posts')}
                 className={styles.destaques_lista}
                 ref={scrollRef}
                 onMouseDown={onMouseDown}

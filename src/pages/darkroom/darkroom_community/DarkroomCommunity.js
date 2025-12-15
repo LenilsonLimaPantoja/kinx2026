@@ -1,5 +1,5 @@
 import styles from './DarkroomCommunity.module.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BiChat } from 'react-icons/bi';
 import { MdAdd } from 'react-icons/md';
 import DarkroomDetail from './components/DarkroomDetail';
@@ -11,9 +11,17 @@ import FeedNavbar from '../../../components/FeedNavbar';
 import Header from '../../../components/Header';
 import PostsCards from '../../../components/PostsCards';
 import icones from '../../../assets/icones';
+import Loading from '../../../components/Loading';
 
 const DarkroomCommunity = () => {
     const [btnAtivo, setBtnAtivo] = useState(1);
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+    }, []);
+
     const botoes = [
         {
             left: [
@@ -31,10 +39,14 @@ const DarkroomCommunity = () => {
     const handleDesenvolvimento = (texto) => {
         alert(`Funcionalidade de "${texto}" em desenvolvimento.`);
     }
+
     return (
         <div className={styles.container_feed_principal}>
+            {loading &&
+                <Loading />
+            }
             {/* aqui eu devo fazer um ajuste, pois o cabeçalho não é esse */}
-            <Header logado={true}/>
+            <Header logado={true} />
             <TipoDarkroom />
             <EventosPrincipais />
             <FeedNavbar btnAtivo={btnAtivo} setBtnAtivo={setBtnAtivo} botoes={botoes} />

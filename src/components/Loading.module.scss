@@ -1,0 +1,34 @@
+@import '../styles/global.scss';
+
+.areaLoading {
+    background-color: $bg-dark;
+    height: 100vh;
+    max-height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999999;
+
+    .loading {
+        width: 30px;
+        height: 30px;
+        border: solid 3px $bg-green;
+        border-radius: 50%;
+        border-left: solid 3px transparent;
+        animation-name: loading;
+        animation-duration: .7s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes loading {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
