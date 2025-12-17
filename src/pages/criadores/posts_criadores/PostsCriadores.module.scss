@@ -11,5 +11,14 @@
         max-width: 1184px;
         gap: 36px;
 
+        .posts {
+            display: flex;
+            gap: 46px;
+
+            .area_body {
+                flex-grow: 1;
+            }
+        }
+
     }
 }

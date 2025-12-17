@@ -1,0 +1,156 @@
+@import '../../../styles/global.scss';
+
+.profileOverview {
+    background-color: $bg-dark-secondary;
+    width: 402px;
+    border-radius: 15px;
+    height: fit-content;
+
+    .profileContent {
+        padding: 39px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .username {
+            font-size: 16px;
+            font-family: $font-bold;
+            color: #fff;
+        }
+
+        .description,
+        .highlights {
+            font-size: 12px;
+            color: $bg-gray;
+        }
+
+        .profileMeta {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .meta {
+                display: flex;
+                gap: 20px;
+
+                .metaItem {
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
+                    font-size: 12px;
+                    color: $bg-gray;
+                    gap: 5px;
+
+                    .metaLabel {}
+
+                    .metaValue {}
+                }
+            }
+
+            .location {
+                display: flex;
+                font-size: 12px;
+                color: $bg-gray;
+                gap: 5px;
+            }
+
+            .stats {
+                display: flex;
+                gap: 20px;
+
+                .statItem {
+                    font-family: $font-bold;
+                    font-size: 10px;
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    svg {
+                        font-size: 15px;
+                        color: $bg-gray;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .audioSection {
+        padding: 39px;
+    }
+
+    .aboutSection {
+        padding: 39px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .aboutTitle {
+            font-size: 14px;
+            font-family: $font-bold;
+            color: $bg-gray-b;
+        }
+
+        .aboutItemTopo {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+
+            .aboutLabel {
+                font-size: 10px;
+                color: $bg-gray;
+
+            }
+
+
+            .aboutValueGroup {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                font-size: 10px;
+
+                .aboutValue {
+                    font-size: 10px;
+                    font-family: $font-bold;
+                    color: #fff;
+                }
+
+                .aboutDescription {
+                    color: $bg-gray;
+
+                }
+            }
+        }
+
+        .aboutRow {
+            display: flex;
+            font-size: 10px;
+            gap: 20px;
+
+            .aboutItem {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                min-width: 50%;
+
+                .aboutLabel {
+                    color: $bg-gray;
+                }
+
+                .aboutValue {
+                    color: #fff;
+                    font-family: $font-bold;
+                }
+            }
+        }
+    }
+
+
+    .dividir {
+        background-color: $bg-dark;
+        height: 1px;
+        width: 100%;
+    }
+}

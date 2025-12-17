@@ -111,7 +111,12 @@ const Destaques = () => {
     const handleSelectDestaque = (destaque) => {
         const destaquesSelect = destaques.map((item) => {
             if (item?.id === destaque?.id) {
-                item.seleted = true;
+                if (item.seleted === true) {
+                    navigation('/criadores/posts');
+                    item.seleted = false;
+                } else {
+                    item.seleted = true;
+                }
                 return item
             }
             item.seleted = false;
@@ -124,7 +129,7 @@ const Destaques = () => {
         <div className={styles.destaques}>
             <span className={styles.destaques_titulo}>Destaques:</span>
             <div
-                onClick={() => navigation('/criadores/posts')}
+                // onClick={() => navigation('/criadores/posts')}
                 className={styles.destaques_lista}
                 ref={scrollRef}
                 onMouseDown={onMouseDown}

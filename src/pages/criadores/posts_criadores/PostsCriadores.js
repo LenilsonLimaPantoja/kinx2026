@@ -6,6 +6,9 @@ import Loading from '../../../components/Loading';
 import CriadoresBanner from '../components/CriadoresBanner';
 import ProfileSocialBar from '../components/ProfileSocialBar';
 import icones from '../../../assets/icones';
+import PostsCards from '../../../components/PostsCards';
+import ProfileOverview from '../components/ProfileOverview';
+import DarkroonsLista from '../../darkroom/darkroom_main_feed/components/DarkroonsLista';
 
 const array = [
     {
@@ -35,6 +38,19 @@ const PostsCriadores = () => {
                 <CriadoresBanner />
                 <ProfileSocialBar />
                 <FeedNavbar botoes={array} btnAtivo={btnAtivo} setBtnAtivo={setBtnAtivo} />
+
+                <div className={styles.posts}>
+                    <div className={styles.area_body}>
+                        {btnAtivo === 1 &&
+                            <PostsCards />
+                        }
+                        {btnAtivo === 3 &&
+                            <DarkroonsLista />
+                        }
+                    </div>
+
+                    <ProfileOverview />
+                </div>
             </div>
         </div>
     )
