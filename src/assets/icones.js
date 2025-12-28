@@ -8,7 +8,7 @@ import { HiHeart, HiOutlineHeart, HiRefresh } from "react-icons/hi";
 import { IoMdStar } from "react-icons/io";
 import { IoPlayOutline } from "react-icons/io5";
 import { LuBookmark, LuEye, LuUserRound, LuUsers } from "react-icons/lu";
-import { MdLockOutline, MdOutlineChevronRight, MdOutlineClose, MdOutlineImage } from "react-icons/md";
+import { MdLockOutline, MdOutlineChevronRight, MdOutlineClose, MdOutlineImage, MdSmartDisplay } from "react-icons/md";
 import { PiChats, PiHandHeartBold } from "react-icons/pi";
 import { RiChatAiLine, RiFireLine, RiMenuLine } from "react-icons/ri";
 import { RxCounterClockwiseClock } from "react-icons/rx";
@@ -47,9 +47,10 @@ const icones = {
     "verifie": <VscVerifiedFilled />,
     "imagem": <MdOutlineImage />,
     "play": <IoPlayOutline />,
+    "play_video": <MdSmartDisplay />,
     "seguindo": <BiDonateHeart />,
     "location": <GrLocation />,
-    "presente": <SlPresent/>
+    "presente": <SlPresent />
 
 }
 

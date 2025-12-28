@@ -1,0 +1,96 @@
+@import '../../../styles/global.scss';
+
+.galeria_criadores {
+    width: 100%;
+    max-width: 717px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background-color: transparent;
+
+    .galeria_criadores_filtros {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        .galeria_criadores_select {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            width: 100px;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+
+    .galeria_criadores_grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+
+        .galeria_criadores_item {
+            flex-grow: 1;
+            min-width: 30%;
+            max-width: 235px;
+            height: 203px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: .5s ease-in-out;
+
+            &:hover {
+                opacity: .5;
+            }
+
+            .galeria_criadores_imagem {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+
+            .bloqueado {
+                background: #00000038;
+                filter: blur(20px);
+            }
+
+            .galeria_criadores_botaoPreco {
+                z-index: 1;
+                position: absolute;
+                bottom: 13px;
+                right: 13px;
+                background-color: $bg-green;
+                height: 24px;
+                border-radius: 6px;
+                padding: 0px 10px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                svg {
+                    font-size: 10px;
+                    color: #000;
+                }
+
+                .galeria_criadores_preco {
+                    font-family: $font-bold;
+                    font-size: 12px;
+                }
+            }
+
+            svg {
+                position: static;
+                z-index: 1;
+                color: $bg-green;
+                font-size: 50px;
+            }
+        }
+    }
+}

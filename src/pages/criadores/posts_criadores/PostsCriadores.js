@@ -9,6 +9,7 @@ import icones from '../../../assets/icones';
 import PostsCards from '../../../components/PostsCards';
 import ProfileOverview from '../components/ProfileOverview';
 import DarkroonsLista from '../../darkroom/darkroom_main_feed/components/DarkroonsLista';
+import GaleriaCriadores from '../components/GaleriaCriadores';
 
 const array = [
     {
@@ -43,6 +44,9 @@ const PostsCriadores = () => {
                     <div className={styles.area_body}>
                         {btnAtivo === 1 &&
                             <PostsCards />
+                        }
+                        {btnAtivo === 2 &&
+                            <GaleriaCriadores />
                         }
                         {btnAtivo === 3 &&
                             <DarkroonsLista />

@@ -75,7 +75,7 @@ const arrayList = [
     },
 ];
 
-const Destaques = () => {
+const Destaques = ({ setLoading }) => {
     const scrollRef = useRef(null);
     const navigation = useNavigate();
     const [destaques, setDestaques] = useState(arrayList);
@@ -112,6 +112,7 @@ const Destaques = () => {
         const destaquesSelect = destaques.map((item) => {
             if (item?.id === destaque?.id) {
                 if (item.seleted === true) {
+                    setLoading(true);
                     navigation('/criadores/posts');
                     item.seleted = false;
                 } else {

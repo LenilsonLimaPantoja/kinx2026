@@ -31,7 +31,7 @@ const ExplorarCriadores = () => {
                 <FormFiltro />
                 <TagsFiltro />
             </div>
-            <Destaques />
+            <Destaques setLoading={setLoading} />
             <Criadores />
         </div>
     )
