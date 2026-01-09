@@ -1,12 +1,10 @@
 import styles from './DarkroomCommunity.module.scss';
 import { useEffect, useState } from 'react';
-import { BiChat } from 'react-icons/bi';
-import { MdAdd } from 'react-icons/md';
 import DarkroomDetail from './components/DarkroomDetail';
 import EventosPrincipais from './components/EventosPrincipais';
 import TipoDarkroom from './components/TipoDarkroom';
 import LocaisFeed from './components/LocaisFeed';
-import EventosFeed from './components/EventosFeed';
+import EventosFeed from '../../../components/EventosFeed';
 import FeedNavbar from '../../../components/FeedNavbar';
 import Header from '../../../components/Header';
 import PostsCards from '../../../components/PostsCards';
@@ -26,11 +24,11 @@ const DarkroomCommunity = () => {
         {
             left: [
                 { titulo: "Agora", id: 1, icone: null },
-                { titulo: "Darkrooms", id: 2, icone: null },
+                { titulo: "Eventos", id: 2, icone: null },
                 { titulo: "Locais", id: 3, icone: null }
             ],
             right: [
-                { titulo: "Novo Post", id: 1, icone: <MdAdd />, flutuante: null, funcao: () => handleDesenvolvimento("NOVO POST") },
+                { titulo: "Novo Post", id: 1, icone: icones.add, flutuante: null, funcao: () => handleDesenvolvimento("NOVO POST") },
                 { titulo: "", id: 2, icone: icones.chat, flutuante: 2, funcao: () => handleDesenvolvimento("CHAT") },
             ]
         }

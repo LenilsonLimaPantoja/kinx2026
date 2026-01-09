@@ -1,54 +1,56 @@
-import styles from './PostsCriadores.module.scss';
 import Header from '../../../components/Header';
-import FeedNavbar from '../../../components/FeedNavbar';
-import { useEffect, useState } from 'react';
-import Loading from '../../../components/Loading';
 import CriadoresBanner from '../../../components/CriadoresBanner';
 import ProfileSocialBar from '../../../components/ProfileSocialBar';
+import FeedNavbar from '../../../components/FeedNavbar';
+import styles from './PerfilCriadores.module.scss';
+import BannerValidarIdade from './components/BannerValidarIdade';
 import icones from '../../../assets/icones';
+import { useState } from 'react';
 import PostsCards from '../../../components/PostsCards';
 import ProfileOverview from '../../../components/ProfileOverview';
 import DarkroonsLista from '../../../components/DarkroonsLista';
-import GaleriaCriadores from '../components/GaleriaCriadores';
+import post1 from '../../../arquivos/criadores/perfil/post1.png';
+import post2 from '../../../arquivos/criadores/perfil/post2.png';
+import Galeria from '../../../components/Galeria';
 
 const array = [
     {
         left: [
-            { id: 1, titulo: "Posts" },
-            { id: 2, titulo: "Galeria" },
-            { id: 3, titulo: "Darkroom" },
+            { id: 1, titulo: "Agora" },
+            { id: 2, titulo: "Meu Feed" },
+            { id: 3, titulo: "Galeria" },
+            { id: 4, titulo: "Darkrooms" },
         ],
         right: [
-            { id: 1, icone: icones.chat, flutuante: "2" }
+            { id: 1, titulo: "Novo Post", icone: icones.add },
+            { id: 2, icone: icones.chat, flutuante: "2" }
         ]
     }
 ]
-const PostsCriadores = () => {
-    const [loading, setLoading] = useState(true);
+
+const PerfilCriadores = () => {
     const [btnAtivo, setBtnAtivo] = useState(1);
-    useEffect(() => {
-        setTimeout(() => {
-            setLoading(false);
-        }, 2000);
-    }, []);
+
     return (
-        <div className={styles.posts_criadores}>
-            <div className={styles.area_posts_criadores}>
-                {loading && <Loading />}
+        <div className={styles.perfil_criadores}>
+            <div className={styles.area_perfil_criadores}>
                 <Header logado={true} />
                 <CriadoresBanner />
                 <ProfileSocialBar />
+                <BannerValidarIdade />
                 <FeedNavbar botoes={array} btnAtivo={btnAtivo} setBtnAtivo={setBtnAtivo} />
-
                 <div className={styles.posts}>
                     <div className={styles.area_body}>
                         {btnAtivo === 1 &&
-                            <PostsCards />
+                            <PostsCards img={post1} />
                         }
                         {btnAtivo === 2 &&
-                            <GaleriaCriadores />
+                            <PostsCards img={post2} />
                         }
                         {btnAtivo === 3 &&
+                            <Galeria />
+                        }
+                        {btnAtivo === 4 &&
                             <DarkroonsLista />
                         }
                     </div>
@@ -59,4 +61,4 @@ const PostsCriadores = () => {
         </div>
     )
 }
-export default PostsCriadores;
+export default PerfilCriadores;

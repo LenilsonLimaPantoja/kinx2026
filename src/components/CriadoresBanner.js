@@ -1,7 +1,7 @@
-import icones from '../../../assets/icones';
+import icones from '../assets/icones';
 import styles from './CriadoresBanner.module.scss';
-import avatar1 from '../components/destaques/avatar1.png';
-import brasil from '../../../arquivos/brasil.png';
+import avatar1 from '../arquivos/criadores_avatar.png';
+import brasil from '../arquivos/brasil.png';
 
 const CriadoresBanner = () => {
     return (

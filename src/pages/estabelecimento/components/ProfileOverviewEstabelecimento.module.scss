@@ -1,0 +1,252 @@
+@import '../../../styles/global.scss';
+
+.profileOverview {
+    background-color: $bg-dark-secondary;
+    width: 402px;
+    border-radius: 15px;
+    height: fit-content;
+
+    .profileContent {
+        padding: 39px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .username {
+            font-size: 16px;
+            font-family: $font-bold;
+            color: #fff;
+        }
+
+        .description {
+            font-size: 12px;
+            color: #fff;
+        }
+
+        .profileMeta {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .meta {
+                display: flex;
+                gap: 20px;
+
+                .metaItem {
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
+                    font-size: 12px;
+                    color: $bg-gray;
+                    gap: 5px;
+
+                    .metaLabel {}
+
+                    .metaValue {}
+                }
+            }
+
+            .stats {
+                display: flex;
+                gap: 20px;
+
+                .statItem {
+                    font-family: $font-bold;
+                    font-size: 10px;
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    svg {
+                        font-size: 15px;
+                        color: $bg-gray;
+                    }
+                }
+            }
+
+            .endereco {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+
+                svg {
+                    font-size: 15px;
+                    color: $bg-gray;
+                }
+
+                .area_right {
+                    display: flex;
+                    flex-direction: column;
+                    color: $bg-gray;
+                    gap: 5px;
+
+                    .titulo {
+                        font-size: 10px;
+                        margin-bottom: 5px;
+                    }
+
+                    .tua_numero,
+                    .bairro_cidade {
+                        font-size: 12px;
+                    }
+                }
+
+            }
+
+            .horario_funcionamento {
+                display: flex;
+                gap: 10px;
+                align-items: flex-start;
+                color: $bg-gray;
+
+                svg {
+                    font-size: 15px;
+                }
+
+                .right {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .titulo {
+                        font-size: 10px;
+                    }
+
+                    .area_horario {
+                        font-size: 12px;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+
+                        .status {
+                            color: #2AFE00;
+                            font-family: $font-bold;
+                        }
+
+                        svg {
+                            color: #fff;
+                        }
+
+                        .hora {}
+                    }
+                }
+            }
+
+            .horario {
+                border-radius: 12px;
+                color: $bg-gray;
+                width: 100%;
+                display: flex;
+                gap: 10px;
+                align-items: flex-start;
+
+                svg {
+                    font-size: 15px;
+                }
+
+                .right {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+
+                    span {
+                        font-size: 10px;
+                    }
+
+                    .horario_dias {
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 10px;
+                        cursor: pointer;
+                        transition: .5s ease-in-out;
+
+                        .ativo {
+                            color: $bg-green;
+                        }
+                    }
+
+                    .horario_grafico {
+                        display: flex;
+                        align-items: flex-end;
+                        gap: 6px;
+                        justify-content: space-between;
+                        height: 60px;
+
+                        .barra {
+                            width: 6px;
+                            border-radius: 4px;
+                            transition: .5s;
+                        }
+                    }
+
+                    .timeline {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        .tracos {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+
+                            .area_traco {
+                                height: 5px;
+                                width: 12.5%;
+                                border-top: solid 2px $bg-gray;
+                                display: flex;
+                                justify-content: center;
+
+                                .traco {
+                                    width: 2px;
+                                    height: 5px;
+                                    background: $bg-gray;
+                                    border-radius: 2px;
+                                }
+                            }
+                        }
+
+                        .horas {
+                            display: flex;
+                            justify-content: space-between;
+                            font-size: 6px;
+                            color: $bg-gray;
+
+                            span {
+                                width: 12.5%;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .info_agora {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+
+                        span {
+                            font-size: 10px;
+                            font-family: $font-bold;
+
+                            &:nth-child(1) {
+                                color: $bg-green;
+                            }
+                        }
+
+                        svg {
+                            color: #fff;
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .dividir {
+        background-color: $bg-dark;
+        height: 1px;
+        width: 100%;
+    }
+}

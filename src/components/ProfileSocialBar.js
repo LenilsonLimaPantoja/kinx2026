@@ -1,4 +1,4 @@
-import icones from '../../../assets/icones';
+import icones from '../assets/icones';
 import styles from './ProfileSocialBar.module.scss';
 const ProfileSocialBar = () => {
     return (

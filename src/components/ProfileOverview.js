@@ -1,7 +1,7 @@
-import icones from '../../../assets/icones';
-import AudioVoz from '../../../components/AudioVoz';
+import icones from '../assets/icones';
+import AudioVoz from './AudioVoz';
 import styles from './ProfileOverview.module.scss';
-import avatar1 from './destaques/avatar1.png';
+import avatar1 from '../arquivos/criadores_avatar.png';
 
 const ProfileOverview = () => {
     return (

@@ -1,10 +1,9 @@
 import styles from './PostsCards.module.scss';
-import feed_principal from '../arquivos/feed_principal.png';
 import casual_amizade from '../arquivos/casual_amizade.png';
 import icones from '../assets/icones';
 import { useState } from 'react';
 
-const PostsCards = () => {
+const PostsCards = ({ img }) => {
     const [curtido, setCurtido] = useState(true);
 
     const handleDesenvolvimento = (texto) => {
@@ -36,7 +35,7 @@ const PostsCards = () => {
                         <span>Madura</span>
                     </div>
                     <div className={styles.card_agora_img_area} onClick={() => handleDesenvolvimento("ABRIR POST")}>
-                        <img src={feed_principal} alt='Imagem do feed_principal' />
+                        <img src={img} alt='Imagem do feed_principal' />
                     </div>
                     <div className={styles.card_agora_bottom}>
                         <div className={styles.card_agora_bottom_left}>

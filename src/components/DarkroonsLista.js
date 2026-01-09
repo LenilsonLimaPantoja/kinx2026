@@ -1,6 +1,6 @@
 import styles from './DarkroonsLista.module.scss';
-import casual_amizade from '../../../../arquivos/casual_amizade.png';
-import icones from '../../../../assets/icones';
+import casual_amizade from '../arquivos/casual_amizade.png';
+import icones from '../assets/icones';
 import { useNavigate } from 'react-router-dom';
 
 const DarkroonsLista = () => {

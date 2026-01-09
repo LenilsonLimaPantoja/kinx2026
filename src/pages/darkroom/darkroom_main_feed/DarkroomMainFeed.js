@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { TbCompass } from 'react-icons/tb';
 import DarkroomsPoluares from './components/DarkroomsPoluares';
 import PostagensRecentes from '../components/PostagensRecentes';
-import DarkroonsLista from './components/DarkroonsLista';
+import DarkroonsLista from '../../../components/DarkroonsLista';
 import FeedNavbar from '../../../components/FeedNavbar';
 import PostsCards from '../../../components/PostsCards';
 import SectionHeader from '../../../components/SectionHeader';

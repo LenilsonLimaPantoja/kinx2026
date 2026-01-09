@@ -1,4 +1,4 @@
-@import '../../../styles/global.scss';
+@import '../styles/global.scss';
 
 .creator {
     background-color: blue;
@@ -6,7 +6,7 @@
     width: 100%;
     border-radius: 15px;
     height: 311px;
-    background-image: url("../components/criadores/fundo1.png");
+    background-image: url("../arquivos/criadores_banner.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

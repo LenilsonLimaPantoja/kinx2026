@@ -1,7 +1,8 @@
 import styles from './EventosFeed.module.scss';
-import eventos from '../../../../arquivos/eventos.png';
-import casual_amizade from '../../../../arquivos/casual_amizade.png';
-import icones from '../../../../assets/icones';
+import eventos from '..//arquivos/eventos.png';
+import eventos2 from '..//arquivos/eventos2.png';
+import criadores_avatar from '../arquivos/criadores_avatar.png';
+import icones from '../assets/icones';
 import { useState } from 'react';
 
 const EventosFeed = () => {
@@ -16,7 +17,7 @@ const EventosFeed = () => {
                 <div key={index} className={styles.card_agora}>
                     <div className={styles.card_agora_topo}>
                         <div className={styles.card_agora_topo_left}>
-                            <img src={casual_amizade} alt='Imagem icone casual_amizade' />
+                            <img src={criadores_avatar} alt='Imagem icone criadores_avatar' />
                             <span className={styles.left_titulo}>@Maralora32</span>
                             {icones.ponto}
                             <span className={styles.left_acesso_tempo}>08 Minutos Atrás</span>
@@ -46,7 +47,7 @@ const EventosFeed = () => {
                         <span>Madura</span>
                     </div>
                     <div className={styles.card_agora_img_area} onClick={() => handleDesenvolvimento("ABRIR POST")}>
-                        <img src={eventos} alt='Imagem do eventos' />
+                        <img src={index < 1 ? eventos : eventos2} alt='Imagem do eventos' />
                     </div>
                     <div className={styles.card_agora_bottom}>
                         <div className={styles.card_agora_bottom_left}>

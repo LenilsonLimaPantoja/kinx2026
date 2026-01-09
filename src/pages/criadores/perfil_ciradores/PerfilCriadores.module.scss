@@ -1,0 +1,24 @@
+@import '../../../styles/global.scss';
+
+.perfil_criadores {
+    display: flex;
+    justify-content: center;
+    padding: 36px 0px;
+
+    .area_perfil_criadores {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        max-width: 1184px;
+        gap: 36px;
+
+        .posts {
+            display: flex;
+            gap: 46px;
+
+            .area_body {
+                flex-grow: 1;
+            }
+        }
+    }
+}

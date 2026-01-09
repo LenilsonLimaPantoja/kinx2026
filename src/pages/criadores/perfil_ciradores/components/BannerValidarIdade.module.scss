@@ -1,0 +1,33 @@
+@import '../../../../styles/global.scss';
+
+.banner_validar_idade {
+    background-color: $bg-dark-secondary;
+    width: 100%;
+    border-radius: 15px;
+    padding: 28px;
+    gap: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .banner_titulo {
+        font-family: $font-bold;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .banner_descricao {
+        font-size: 13px;
+        color: #fff;
+        max-width: 726px;
+    }
+
+    .banner_botao {
+        font-size: 20px;
+        color: $bg-green;
+        font-family: $font-bold;
+        background-color: transparent;
+    }
+}
