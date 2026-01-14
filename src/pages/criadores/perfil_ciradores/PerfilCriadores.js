@@ -5,13 +5,14 @@ import FeedNavbar from '../../../components/FeedNavbar';
 import styles from './PerfilCriadores.module.scss';
 import BannerValidarIdade from './components/BannerValidarIdade';
 import icones from '../../../assets/icones';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import PostsCards from '../../../components/PostsCards';
 import ProfileOverview from '../../../components/ProfileOverview';
 import DarkroonsLista from '../../../components/DarkroonsLista';
 import post1 from '../../../arquivos/criadores/perfil/post1.png';
 import post2 from '../../../arquivos/criadores/perfil/post2.png';
 import Galeria from '../../../components/Galeria';
+import Loading from '../../../components/Loading';
 
 const array = [
     {
@@ -30,9 +31,19 @@ const array = [
 
 const PerfilCriadores = () => {
     const [btnAtivo, setBtnAtivo] = useState(1);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+    }, []);
 
     return (
         <div className={styles.perfil_criadores}>
+            {loading &&
+                <Loading />
+            }
             <div className={styles.area_perfil_criadores}>
                 <Header logado={true} />
                 <CriadoresBanner />

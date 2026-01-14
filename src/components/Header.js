@@ -13,7 +13,7 @@ const Header = ({ logado }) => {
         { descricao: 'Home', id: 1, rota: '/', selected: rota === "/" ? true : false },
         { descricao: 'Criadores', id: 2, rota: '/criadores', selected: rota === "/criadores" ? true : false },
         { descricao: 'Darkrooms', id: 3, rota: '/darkrooms', selected: rota === "/darkrooms" ? true : false },
-        { descricao: 'Eventos', id: 4, rota: '/eventos', selected: rota === "/eventos" ? true : false },
+        { descricao: 'Eventos', id: 4, rota: '/estabelecimentos/perfil', selected: rota === "/estabelecimentos/perfil" ? true : false },
         { descricao: 'Suporte', id: 5, rota: '/suporte', selected: rota === "/suporte" ? true : false }
     ]
     const handleMenu = (rota, id) => {

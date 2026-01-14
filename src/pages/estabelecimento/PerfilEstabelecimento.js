@@ -4,7 +4,7 @@ import ProfileSocialBar from '../../components/ProfileSocialBar';
 import FeedNavbar from '../../components/FeedNavbar';
 import styles from './PerfilEstabelecimento.module.scss';
 import icones from '../../assets/icones';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import PostsCards from '../../components/PostsCards';
 import DarkroonsLista from '../../components/DarkroonsLista';
 import post1 from '../../arquivos/criadores/perfil/post1.png';
@@ -12,11 +12,19 @@ import post2 from '../../arquivos/estabelecimento/perfil/post2.png';
 import Galeria from '../../components/Galeria';
 import EventosFeed from '../../components/EventosFeed';
 import ProfileOverviewEstabelecimento from './components/ProfileOverviewEstabelecimento';
+import Loading from '../../components/Loading';
 
 
 
 const PerfilEstabelecimento = () => {
     const [btnAtivo, setBtnAtivo] = useState(1);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+    }, []);
 
     const titulo_right =
         btnAtivo === 1 ? 'Agora' :
@@ -42,6 +50,9 @@ const PerfilEstabelecimento = () => {
 
     return (
         <div className={styles.perfil_criadores}>
+            {loading &&
+                <Loading />
+            }
             <div className={styles.area_perfil_criadores}>
                 <Header logado={true} />
                 <CriadoresBanner />
