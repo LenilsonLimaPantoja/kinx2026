@@ -1,4 +1,4 @@
-import { BiDonateHeart, BiUserPin } from "react-icons/bi";
+import { BiDonateHeart, BiEdit, BiUserPin } from "react-icons/bi";
 import { CgList } from "react-icons/cg";
 import { FaInstagram, FaRegCircleCheck, FaTelegram, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
 import { FiLogIn } from "react-icons/fi";
@@ -9,7 +9,7 @@ import { IoMdStar } from "react-icons/io";
 import { IoPlayOutline } from "react-icons/io5";
 import { LuBookmark, LuEye, LuUserRound, LuUsers } from "react-icons/lu";
 import { MdAdd, MdLockOutline, MdOutlineChevronRight, MdOutlineClose, MdOutlineImage, MdSmartDisplay } from "react-icons/md";
-import { PiChats, PiHandHeartBold } from "react-icons/pi";
+import { PiChartLineUpBold, PiChats, PiHandHeartBold } from "react-icons/pi";
 import { RiChatAiLine, RiFireLine, RiMenuLine } from "react-icons/ri";
 import { RxCounterClockwiseClock } from "react-icons/rx";
 import { SlPresent } from "react-icons/sl";
@@ -52,7 +52,9 @@ const icones = {
     "seguindo": <BiDonateHeart />,
     "location": <GrLocation />,
     "presente": <SlPresent />,
-    "relogio": <TbClockHour9 />
+    "relogio": <TbClockHour9 />,
+    "chart": <PiChartLineUpBold />,
+    "edit": <BiEdit />
 
 }
 

@@ -1,10 +1,12 @@
 import icones from '../../../assets/icones';
 import styles from './ProfileOverviewEstabelecimento.module.scss';
 import avatar1 from '../../../arquivos/criadores_avatar.png';
+import moderadores from '../../../arquivos/moderadores.png';
 import { useEffect, useState } from 'react';
+import { IoMdStar } from 'react-icons/io';
 
 const ProfileOverviewEstabelecimento = () => {
-    let padrao = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    let padrao = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10];
     const [dadosSemana, setDadosSemana] = useState({});
     const [dados, setDados] = useState(padrao);
     const [diaSemana, setDiaSemana] = useState();
@@ -59,7 +61,10 @@ const ProfileOverviewEstabelecimento = () => {
         <div className={styles.profileOverview}>
 
             <div className={styles.profileContent}>
-                <span className={styles.username}>@MirelaJanis</span>
+                <div className={styles.topo}>
+                    <span className={styles.username}>@MirelaJanis</span>
+                    <button>{icones.edit}</button>
+                </div>
 
                 <p className={styles.description}>
                     A Sauna Sauce não é apenas um espaço — é um estado de espírito. Um refúgio onde o tempo desacelera e os sentidos ganham voz. Cada detalhe foi pensado para provocar. Do calor que envolve a pele ao vapor que esconde e revela desejos, tudo convida ao encontro sem pressa, ao toque sem rótulos, à troca que não precisa de palavras. Ambientes discretos, iluminação suave, encontros que surgem no ritmo do olhar. Aromas marcantes dançam no ar, criando uma atmosfera que acende memórias e desperta vontades.
@@ -170,6 +175,69 @@ const ProfileOverviewEstabelecimento = () => {
 
             <div className={styles.dividir} />
 
+            <div className={styles.achievements}>
+                <div className={styles.achievementsHeader}>
+                    <span className={styles.achievementsTitle}>Conquistas</span>
+                    <button className={styles.achievementsButton}>
+                        {icones.chart}
+                    </button>
+                </div>
+
+                <div className={styles.achievementsBody}>
+                    {/* conteúdo */}
+                </div>
+            </div>
+
+            <div className={styles.dividir} />
+
+            <div className={styles.reviews}>
+                <div className={styles.reviewsHeader}>
+                    <span className={styles.reviewsTitle}>Avaliações</span>
+
+                    <div className={styles.reviewsScore}>
+                        <div className={styles.reviewsStars}>
+                            <IoMdStar />
+                            <IoMdStar />
+                            <IoMdStar />
+                            <IoMdStar />
+                            <IoMdStar />
+                        </div>
+
+                        <span className={styles.reviewsRating}>4,52</span>
+                    </div>
+                </div>
+
+                <span className={styles.reviewsHint}>
+                    Realize a avaliação do Estabelecimento,{" "}
+                    <a href="http://">clique aqui</a>.
+                </span>
+
+                <div className={styles.reviewsBody}>
+                    <span className={styles.reviewsSubtitle}>Últimas Avaliações:</span>
+
+                    {Array.from({ length: 4 }).map((__, index) => (
+                        <div key={index} className={styles.reviewItem}>
+                            <img
+                                className={styles.reviewAvatar}
+                                src={moderadores}
+                                alt="Avatar avaliador"
+                            />
+
+                            <div className={styles.reviewContent}>
+                                <span className={styles.reviewUsername}>JamesHunterXXX</span>
+
+                                <div className={styles.reviewStars}>
+                                    <IoMdStar />
+                                    <IoMdStar />
+                                    <IoMdStar />
+                                    <IoMdStar />
+                                    <IoMdStar />
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
     );
 };

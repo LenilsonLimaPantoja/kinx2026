@@ -10,6 +10,7 @@ import PostsCards from '../../../components/PostsCards';
 import ProfileOverview from '../../../components/ProfileOverview';
 import DarkroonsLista from '../../../components/DarkroonsLista';
 import GaleriaCriadores from '../components/GaleriaCriadores';
+import feed_principal from '../../../arquivos/feed_principal.png';
 
 const array = [
     {
@@ -43,7 +44,7 @@ const PostsCriadores = () => {
                 <div className={styles.posts}>
                     <div className={styles.area_body}>
                         {btnAtivo === 1 &&
-                            <PostsCards />
+                            <PostsCards img={feed_principal}/>
                         }
                         {btnAtivo === 2 &&
                             <GaleriaCriadores />

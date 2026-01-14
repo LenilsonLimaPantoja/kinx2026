@@ -13,24 +13,32 @@ import Galeria from '../../components/Galeria';
 import EventosFeed from '../../components/EventosFeed';
 import ProfileOverviewEstabelecimento from './components/ProfileOverviewEstabelecimento';
 
-const array = [
-    {
-        left: [
-            { id: 1, titulo: "Agora" },
-            { id: 2, titulo: "Meu Feed" },
-            { id: 3, titulo: "Galeria" },
-            { id: 4, titulo: "Darkrooms" },
-            { id: 5, titulo: "Eventos" },
-        ],
-        right: [
-            { id: 1, titulo: "Evento", icone: icones.add },
-            { id: 2, icone: icones.chat, flutuante: "2" }
-        ]
-    }
-]
+
 
 const PerfilEstabelecimento = () => {
     const [btnAtivo, setBtnAtivo] = useState(1);
+
+    const titulo_right =
+        btnAtivo === 1 ? 'Agora' :
+            btnAtivo === 2 ? 'Meu Feed' :
+                btnAtivo === 3 ? 'Galeria' :
+                    btnAtivo === 4 ? 'Darkrooms' : 'Eventos';
+
+    const array = [
+        {
+            left: [
+                { id: 1, titulo: "Agora" },
+                { id: 2, titulo: "Meu Feed" },
+                { id: 3, titulo: "Galeria" },
+                { id: 4, titulo: "Darkrooms" },
+                { id: 5, titulo: "Eventos" },
+            ],
+            right: [
+                { id: 1, titulo: titulo_right, icone: icones.add },
+                { id: 2, icone: icones.chat, flutuante: "2" }
+            ]
+        }
+    ];
 
     return (
         <div className={styles.perfil_criadores}>
@@ -45,7 +53,7 @@ const PerfilEstabelecimento = () => {
                             <PostsCards img={post1} />
                         }
                         {btnAtivo === 2 &&
-                            <EventosFeed  />
+                            <EventosFeed />
                         }
                         {btnAtivo === 3 &&
                             <Galeria />

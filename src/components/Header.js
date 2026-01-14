@@ -37,7 +37,9 @@ const Header = ({ logado }) => {
 
             {logado ?
                 <div className={styles.user_card}>
-                    <button className={styles.user_card_left}>
+                    <button
+                        onClick={() => navigation('/criadores/perfil')}
+                        className={styles.user_card_left}>
                         <div className={styles.user_card_avatar_area}>
                             <img className={styles.user_card_avatar} src={user} alt="Imagem de usuário" />
                         </div>

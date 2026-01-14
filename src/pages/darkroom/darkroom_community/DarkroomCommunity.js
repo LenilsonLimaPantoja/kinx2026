@@ -10,6 +10,7 @@ import Header from '../../../components/Header';
 import PostsCards from '../../../components/PostsCards';
 import icones from '../../../assets/icones';
 import Loading from '../../../components/Loading';
+import feed_principal from '../../../arquivos/feed_principal.png';
 
 const DarkroomCommunity = () => {
     const [btnAtivo, setBtnAtivo] = useState(1);
@@ -50,7 +51,7 @@ const DarkroomCommunity = () => {
             <FeedNavbar btnAtivo={btnAtivo} setBtnAtivo={setBtnAtivo} botoes={botoes} />
             <div className={styles.area_body}>
                 {btnAtivo === 1 ?
-                    <PostsCards />
+                    <PostsCards img={feed_principal}/>
                     :
                     btnAtivo === 2 ?
                         <EventosFeed />

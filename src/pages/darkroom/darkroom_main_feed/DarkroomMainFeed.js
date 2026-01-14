@@ -8,6 +8,7 @@ import FeedNavbar from '../../../components/FeedNavbar';
 import PostsCards from '../../../components/PostsCards';
 import SectionHeader from '../../../components/SectionHeader';
 import Loading from '../../../components/Loading';
+import feed_principal from '../../../arquivos/feed_principal.png';
 
 const DarkroomMainFeed = () => {
     const [btnAtivo, setBtnAtivo] = useState(1);
@@ -48,7 +49,7 @@ const DarkroomMainFeed = () => {
             <FeedNavbar btnAtivo={btnAtivo} setBtnAtivo={setBtnAtivo} botoes={botoes} />
             <div className={styles.area_body}>
                 {btnAtivo == 1 ?
-                    <PostsCards />
+                    <PostsCards img={feed_principal}/>
                     :
                     <DarkroonsLista />
                 }
