@@ -8,6 +8,10 @@
     max-width: 717px;
 
     .home_topicos_area_titulo {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
         h2 {
             font-size: 24px;
             color: $bg-gray-b;

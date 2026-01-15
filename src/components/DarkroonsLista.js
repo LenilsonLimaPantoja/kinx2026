@@ -1,9 +1,8 @@
 import styles from './DarkroonsLista.module.scss';
-import casual_amizade from '../arquivos/casual_amizade.png';
 import icones from '../assets/icones';
 import { useNavigate } from 'react-router-dom';
 
-const DarkroonsLista = () => {
+const DarkroonsLista = ({ darkooms }) => {
     const navigation = useNavigate();
 
     const handleNavigation = (rota) => {
@@ -15,41 +14,41 @@ const DarkroonsLista = () => {
     }
     return (
         <div className={styles.container_darkrooms_lista}>
-            {Array.from({ length: 7 })?.map((item, index) => (
-                <div key={index} className={styles.container_darkrooms_lista_card}>
+            {darkooms?.map((item, index) => (
+                <div key={item?.id} className={styles.container_darkrooms_lista_card}>
                     <div className={styles.area_img}>
-                        <img src={casual_amizade} alt='Imagem de casual_amizade' />
+                        <img src={item?.avatar} alt='Imagem de casual_amizade' />
                     </div>
                     <div className={styles.container_darkrooms_lista_card_body} onClick={() => handleNavigation('/darkrooms/feed')}>
                         <div className={styles.container_darkrooms_lista_card_body_top}>
-                            <span>Casual e Amizades</span>
-                            <p>prática sexual em que casais consensualmente trocam parceiros para relações íntimas, seja na mesma sala ou em ambientes separados. Também pode envolver a participação de um terceiro ou de outros casais.</p>
+                            <span>{item?.titulo}</span>
+                            <p>{item?.descricao}</p>
                         </div>
                         <div className={styles.container_darkrooms_lista_card_body_bottom}>
                             <div className={styles.container_darkrooms_lista_card_body_bottom_item}>
                                 <div className={styles.area_icone}>
                                     {icones.users}
                                 </div>
-                                <span>251 Membros</span>
+                                <span>{item?.membros} Membros</span>
                             </div>
                             <div className={styles.container_darkrooms_lista_card_body_bottom_item}>
                                 <div className={styles.area_icone}>
                                     {icones.user}
                                     {icones.ponto}
                                 </div>
-                                <span>121 Online</span>
+                                <span>{item?.online} Online</span>
                             </div>
                             <div className={styles.container_darkrooms_lista_card_body_bottom_item}>
                                 <div className={styles.area_icone}>
                                     {icones.salvo}
                                 </div>
-                                <span>12k Posts</span>
+                                <span>{item?.posts} Posts</span>
                             </div>
                         </div>
                     </div>
                     <div className={styles.container_darkrooms_lista_card_right}>
                         <div className={styles.btns_top}>
-                            {index === 1 &&
+                            {item?.privado && !item?.entrou &&
                                 <>
                                     <button className={styles.privado}>
                                         {icones.cadeado}
@@ -60,13 +59,13 @@ const DarkroonsLista = () => {
                                     </button>
                                 </>
                             }
-                            {index === 2 &&
+                            {!item?.privado && !item?.entrou &&
                                 <button className={styles.entrar} onClick={() => handleDesenvolvimento("ENTRAR")}>
                                     <span>Entrar</span>
                                     {icones.login}
                                 </button>
                             }
-                            {index === 0 &&
+                            {item?.entrou &&
                                 <button>
                                     {icones.check}
                                 </button>

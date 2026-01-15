@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "avatar": "/arquivos/darkroom/populares/avatar1.png",
+        "titulo": "Casual e Amizades",
+        "descricao": "Casais a procura de outros casais com interesses peculiares. Vamos nos conhecer!",
+        "membros": 251,
+        "online": 121,
+        "posts": "12k",
+        "entrou": false
+    },
+    {
+        "id": 2,
+        "avatar": "/arquivos/darkroom/populares/avatar2.png",
+        "titulo": "Voyeres",
+        "descricao": "Casais a procura de outros casais com interesses peculiares. Vamos nos conhecer!",
+        "membros": 251,
+        "online": 121,
+        "posts": "12k",
+        "entrou": true
+    },
+    {
+        "id": 3,
+        "avatar": "/arquivos/darkroom/populares/avatar3.png",
+        "titulo": "Cruising",
+        "descricao": "Casais a procura de outros casais com interesses peculiares. Vamos nos conhecer!",
+        "membros": 251,
+        "online": 121,
+        "posts": "12k",
+        "entrou": false
+    }
+]

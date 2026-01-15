@@ -1,22 +1,7 @@
 import icones from '../../../assets/icones';
 import styles from './Criadores.module.scss';
-import fundo1 from './criadores/fundo1.png';
-import fundo2 from './criadores/fundo2.png';
-import fundo3 from './criadores/fundo3.png';
-import fundo4 from './criadores/fundo4.png';
-import fundo5 from './criadores/fundo5.png';
-import fundo6 from './criadores/fundo6.png';
-import avatar1 from './criadores/avatar1.png';
-import avatar2 from './criadores/avatar2.png';
-import avatar3 from './criadores/avatar3.png';
-import avatar4 from './criadores/avatar4.png';
-import avatar5 from './criadores/avatar5.png';
-import avatar6 from './criadores/avatar6.png';
 
-const fundo = [fundo1, fundo2, fundo3, fundo4, fundo5, fundo6];
-const avatar = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6];
-
-const Criadores = () => {
+const Criadores = ({ criadores }) => {
     const handleDesenvolvimento = (texto) => {
         alert(`Funcionalidade de "${texto}" em desenvolvimento.`);
     }
@@ -25,15 +10,15 @@ const Criadores = () => {
             <div className={styles.cardsList}>
                 <div className={styles.areaTituloList}>
                     <span className={styles.tituloList}>Resultados:</span>
-                    <span className={styles.subTituloList}>08 Criadores</span>
+                    <span className={styles.subTituloList}>{criadores?.length || 0} Criadores</span>
                 </div>
-                {avatar.map((item, index) => (
+                {criadores?.map((item) => (
                     <div
                         onClick={() => handleDesenvolvimento('CRIADOR')}
-                        key={index}
+                        key={item?.id}
                         className={styles.card}
                         style={{
-                            backgroundImage: `url(${fundo[index]})`,
+                            backgroundImage: `url(${item?.fundo})`,
                             backgroundRepeat: 'no-repeat',
                             backgroundSize: 'cover',
                         }}
@@ -44,7 +29,7 @@ const Criadores = () => {
                             <div className={styles.cardLeft}>
                                 <img
                                     className={styles.cardImage}
-                                    src={item}
+                                    src={item.avatar}
                                     alt="Imagem do criador"
                                 />
 
@@ -52,7 +37,7 @@ const Criadores = () => {
                                     <div className={styles.statItem}>
                                         <span className={styles.statIcon}>{icones.olho}</span>
                                         <span className={styles.statText}>
-                                            <strong className={styles.statValue}>233k</strong>
+                                            <strong className={styles.statValue}>{item?.views}</strong>
                                             Views
                                         </span>
                                     </div>
@@ -60,7 +45,7 @@ const Criadores = () => {
                                     <div className={styles.statItem}>
                                         <span className={styles.statIcon}>{icones.assinantes}</span>
                                         <span className={styles.statText}>
-                                            <strong className={styles.statValue}>12k</strong>
+                                            <strong className={styles.statValue}>{item?.assinantes}</strong>
                                             Assinantes
                                         </span>
                                     </div>
@@ -70,17 +55,13 @@ const Criadores = () => {
                             {/* Corpo do card */}
                             <div className={styles.cardRight}>
                                 <div className={styles.creatorInfo}>
-                                    <span className={styles.creatorUsername}>@Arthururach</span>
-                                    <span className={styles.creatorName}>Arthur Urach</span>
+                                    <span className={styles.creatorUsername}>{item?.username}</span>
+                                    <span className={styles.creatorName}>{item?.name}</span>
                                 </div>
 
-                                <p className={styles.creatorDescription}>
-                                    Descubra o universo exclusivo de Mirela Janis, onde sedução,
-                                    carisma e conteúdos envolventes se encontram. Com uma presença
-                                    magnética e produções de alta qualidade (Ver Mais)
-                                </p>
+                                <p className={styles.creatorDescription}>{item?.descricao}</p>
 
-                                <span className={styles.creatorLocation}>São Paulo, SP</span>
+                                <span className={styles.creatorLocation}>{item?.cidade}, {item?.uf}</span>
                             </div>
 
                         </div>

@@ -1,0 +1,22 @@
+[
+    {
+        "codigo": 1,
+        "nome": "X",
+        "link": "https://x.com/?lang=pt/"
+    },
+    {
+        "codigo": 2,
+        "nome": "Instagram",
+        "link": "https://www.instagram.com/"
+    },
+    {
+        "codigo": 3,
+        "nome": "Whatsapp",
+        "link": "https://web.whatsapp.com/"
+    },
+    {
+        "codigo": 4,
+        "nome": "Telegram",
+        "link": "https://web.telegram.org/"
+    }
+]

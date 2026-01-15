@@ -7,6 +7,9 @@ import Destaques from '../components/Destaques';
 import Criadores from '../components/Criadores';
 import { useEffect, useState } from 'react';
 import Loading from '../../../components/Loading';
+import tags_filtro from '../../../data/criadores/tags_filtro.json';
+import destaques from '../../../data/criadores/destaques.json';
+import criadores from '../../../data/criadores/criadores.json';
 
 const ExplorarCriadores = () => {
     const [loading, setLoading] = useState(true);
@@ -29,10 +32,10 @@ const ExplorarCriadores = () => {
             />
             <div className={styles.area_criadores}>
                 <FormFiltro />
-                <TagsFiltro />
+                <TagsFiltro tags_filtro={tags_filtro} />
             </div>
-            <Destaques setLoading={setLoading} />
-            <Criadores />
+            <Destaques setLoading={setLoading} destaques_lista={destaques} />
+            <Criadores criadores={criadores} />
         </div>
     )
 }

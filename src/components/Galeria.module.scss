@@ -4,9 +4,9 @@
     display: flex;
     flex-direction: column;
     gap: 42px;
+    max-width: 717px;
 
     .card_galeria {
-        width: 512px;
         height: 265px;
         border-radius: 20px;
         overflow: hidden;

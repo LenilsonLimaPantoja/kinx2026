@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "avatar": "/arquivos/darkroom/postagem_recente/avatar.png",
+        "post": "/arquivos/darkroom/postagem_recente/post.png",
+        "titulo": "Swing",
+        "tempo_ativo": "08 Minutos Atrás",
+        "descricao": "A procura de sair do tédio, somos um casal jovens interessados ...",
+        "curtidas": 1520,
+        "comentarios": 250
+    },
+    {
+        "id": 3,
+        "avatar": "/arquivos/darkroom/postagem_recente/avatar.png",
+        "post": "/arquivos/darkroom/postagem_recente/post.png",
+        "titulo": "Swing",
+        "tempo_ativo": "08 Minutos Atrás",
+        "descricao": "A procura de sair do tédio, somos um casal jovens interessados ...",
+        "curtidas": 1520,
+        "comentarios": 250
+    },
+    {
+        "id": 3,
+        "avatar": "/arquivos/darkroom/postagem_recente/avatar.png",
+        "post": "/arquivos/darkroom/postagem_recente/post.png",
+        "titulo": "Swing",
+        "tempo_ativo": "08 Minutos Atrás",
+        "descricao": "A procura de sair do tédio, somos um casal jovens interessados ...",
+        "curtidas": 1520,
+        "comentarios": 250
+    }
+]

@@ -5,6 +5,8 @@ import SectionHeader from '../../../components/SectionHeader';
 import icones from '../../../assets/icones';
 import { useEffect, useState } from 'react';
 import Loading from '../../../components/Loading';
+import postagem_recente from '../../../data/darkroom/postagem_recente.json';
+import topicos_alta from '../../../data/darkroom/topicos_alta.json';
 
 const DarkroomsHome = () => {
     const [loading, setLoading] = useState(true);
@@ -28,11 +30,11 @@ const DarkroomsHome = () => {
             />
             <div className={styles.area_body}>
                 <div className={styles.area_darkroom}>
-                    {Array.from({ length: 4 }).map((item, index) => (
-                        <TopicosAlta key={index} />
+                    {topicos_alta?.map((item) => (
+                        <TopicosAlta key={item.id} topicos_alta={item}/>
                     ))}
                 </div>
-                <PostagensRecentes />
+                <PostagensRecentes postagens={postagem_recente} />
             </div>
         </div>
     )

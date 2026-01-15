@@ -1,55 +1,52 @@
 import styles from './PostsCards.module.scss';
-import casual_amizade from '../arquivos/casual_amizade.png';
 import icones from '../assets/icones';
-import { useState } from 'react';
 
-const PostsCards = ({ img }) => {
-    const [curtido, setCurtido] = useState(true);
-
+const PostsCards = ({ posts }) => {
     const handleDesenvolvimento = (texto) => {
         alert(`Funcionalidade de "${texto}" em desenvolvimento.`);
     }
     return (
         <div className={styles.darkrooms_populares_agora}>
-            {Array.from({ length: 3 }).map((item, index) => (
-                <div key={index} className={styles.card_agora}>
+            {posts?.map((item) => (
+                <div key={item?.id} className={styles.card_agora}>
                     <div className={styles.card_agora_topo}>
                         <div className={styles.card_agora_topo_left}>
-                            <img src={casual_amizade} alt='Imagem icone casual_amizade' />
-                            <span className={styles.left_titulo}>Casual e Amizades</span>
+                            <img src={item?.avatar} alt='Imagem icone casual_amizade' />
+                            <span className={styles.left_titulo}>{item?.titulo}</span>
                             {icones.ponto}
-                            <span className={styles.left_acesso_tempo}>08 Minutos Atrás</span>
+                            <span className={styles.left_acesso_tempo}>{item?.tempo_ativo}</span>
                         </div>
                         <div className={styles.card_agora_topo_right}>
-                            {icones.temporario}
-                            <button onClick={() => handleDesenvolvimento("SAIR")}>
-                                {icones.login}
-                            </button>
+                            {item?.temporario && icones.temporario}
+                            {!item?.entrou &&
+                                <button onClick={() => handleDesenvolvimento("SAIR")}>
+                                    {icones.login}
+                                </button>
+                            }
                         </div>
                     </div>
-                    <p className={styles.card_agora_paragrafo}>Estou me busca de amizades e conhecer pessoas interessantes, caso tenha interesse manda mensagem na DM. </p>
+                    <p className={styles.card_agora_paragrafo}>{item?.descricao}</p>
                     <div className={styles.card_agora_tags}>
-                        <span>Solteita</span>
-                        <span>Animado</span>
-                        <span>Animais</span>
-                        <span>Madura</span>
+                        {item.tags?.map((item) => (
+                            <span key={item?.id}>{item?.descricao}</span>
+                        ))}
                     </div>
                     <div className={styles.card_agora_img_area} onClick={() => handleDesenvolvimento("ABRIR POST")}>
-                        <img src={img} alt='Imagem do feed_principal' />
+                        <img src={item?.post} alt='Imagem do feed_principal' />
                     </div>
                     <div className={styles.card_agora_bottom}>
                         <div className={styles.card_agora_bottom_left}>
-                            <div onClick={() => setCurtido(!curtido)} className={styles.card_agora_bottom_left_curtida_coment}>
-                                {curtido ?
+                            <div className={styles.card_agora_bottom_left_curtida_coment}>
+                                {item?.curtida_status ?
                                     icones.gostei_clicado
                                     :
                                     icones.gostei
                                 }
-                                <span>156</span>
+                                <span>{item?.curtidas}</span>
                             </div>
                             <div onClick={() => handleDesenvolvimento("COMENTÁRIOS")} className={styles.card_agora_bottom_left_curtida_coment}>
                                 {icones.comentario}
-                                <span>21</span>
+                                <span>{item?.comentarios}</span>
                             </div>
                         </div>
                         <button onClick={() => handleDesenvolvimento("MENU")} className={styles.card_agora_bottom_icone_menu}>

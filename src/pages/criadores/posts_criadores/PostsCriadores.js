@@ -11,6 +11,10 @@ import ProfileOverview from '../../../components/ProfileOverview';
 import DarkroonsLista from '../../../components/DarkroonsLista';
 import GaleriaCriadores from '../components/GaleriaCriadores';
 import feed_principal from '../../../arquivos/feed_principal.png';
+import banner from '../../../data/criadores/banner.json';
+import tags_perfil from '../../../data/criadores/tags_perfil.json';
+import rede_social from '../../../data/criadores/rede_social.json';
+import posts from '../../../data/criadores/posts.json';
 
 const array = [
     {
@@ -23,7 +27,8 @@ const array = [
             { id: 1, icone: icones.chat, flutuante: "2" }
         ]
     }
-]
+];
+
 const PostsCriadores = () => {
     const [loading, setLoading] = useState(true);
     const [btnAtivo, setBtnAtivo] = useState(1);
@@ -37,14 +42,14 @@ const PostsCriadores = () => {
             <div className={styles.area_posts_criadores}>
                 {loading && <Loading />}
                 <Header logado={true} />
-                <CriadoresBanner />
-                <ProfileSocialBar />
+                <CriadoresBanner banner={banner} />
+                <ProfileSocialBar tags={tags_perfil} rede_social={rede_social} />
                 <FeedNavbar botoes={array} btnAtivo={btnAtivo} setBtnAtivo={setBtnAtivo} />
 
                 <div className={styles.posts}>
                     <div className={styles.area_body}>
                         {btnAtivo === 1 &&
-                            <PostsCards img={feed_principal}/>
+                            <PostsCards posts={posts} />
                         }
                         {btnAtivo === 2 &&
                             <GaleriaCriadores />

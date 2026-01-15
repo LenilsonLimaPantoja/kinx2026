@@ -3,82 +3,12 @@ import styles from './Destaques.module.scss';
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { BiUserPin } from "react-icons/bi";
-import avatar1 from './destaques/avatar1.png';
-import avatar2 from './destaques/avatar2.png';
-import avatar3 from './destaques/avatar3.png';
-import avatar4 from './destaques/avatar4.png';
-import fundo2 from './destaques/fundo2.png';
-import fundo3 from './destaques/fundo3.png';
-import fundo4 from './destaques/fundo4.png';
 import { useNavigate } from 'react-router-dom';
 
-const arrayList = [
-    {
-        id: 1,
-        avatar: avatar1,
-        fundo: fundo2,
-        seleted: false
-    },
-    {
-        id: 2,
-        avatar: avatar2,
-        fundo: fundo3,
-        seleted: false
-    },
-    {
-        id: 3,
-        avatar: avatar3,
-        fundo: fundo4,
-        seleted: false
-    },
-    {
-        id: 4,
-        avatar: avatar4,
-        fundo: fundo2,
-        seleted: false
-    },
-    {
-        id: 5,
-        avatar: avatar2,
-        fundo: fundo3,
-        seleted: false
-    },
-    {
-        id: 6,
-        avatar: avatar1,
-        fundo: fundo2,
-        seleted: false
-    },
-    {
-        id: 7,
-        avatar: avatar3,
-        fundo: fundo4,
-        seleted: false
-    },
-    {
-        id: 8,
-        avatar: avatar4,
-        fundo: fundo2,
-        seleted: false
-    },
-    {
-        id: 9,
-        avatar: avatar2,
-        fundo: fundo3,
-        seleted: false
-    },
-    {
-        id: 10,
-        avatar: avatar3,
-        fundo: fundo4,
-        seleted: false
-    },
-];
-
-const Destaques = ({ setLoading }) => {
+const Destaques = ({ setLoading, destaques_lista }) => {
     const scrollRef = useRef(null);
     const navigation = useNavigate();
-    const [destaques, setDestaques] = useState(arrayList);
+    const [destaques, setDestaques] = useState(destaques_lista);
     const onMouseDown = (e) => {
         const slider = scrollRef.current;
         slider.isDown = true;
@@ -138,9 +68,9 @@ const Destaques = ({ setLoading }) => {
                 onMouseUp={onMouseUp}
                 onMouseMove={onMouseMove}
             >
-                {destaques?.map((item, index) => (
+                {destaques?.map((item) => (
                     <div
-                        key={index}
+                        key={item?.id}
                         className={styles.cartaoDestaque}
                         style={{
                             backgroundImage: `url('${item?.fundo}')`,
@@ -163,14 +93,14 @@ const Destaques = ({ setLoading }) => {
                                     <div className={styles.cartaoDestaque_estatistica}>
                                         <MdOutlineRemoveRedEye />
                                         <span>
-                                            <strong>233k</strong>
+                                            <strong>{item?.views}</strong>
                                             Views
                                         </span>
                                     </div>
                                     <div className={styles.cartaoDestaque_estatistica}>
                                         <BiUserPin />
                                         <span>
-                                            <strong>12k</strong>
+                                            <strong>{item?.assinantes}</strong>
                                             Assinantes
                                         </span>
                                     </div>
@@ -178,14 +108,11 @@ const Destaques = ({ setLoading }) => {
                             </div>
                             <div className={styles.cartaoDestaque_direita}>
                                 <div className={styles.cartaoDestaque_usuario}>
-                                    <span className={styles.cartaoDestaque_username}>@MirelaJanis</span>
-                                    <span style={{ display: item?.seleted ? 'flex' : 'none' }} className={styles.cartaoDestaque_nome}>Mirela Janis</span>
+                                    <span className={styles.cartaoDestaque_username}>{item?.username}</span>
+                                    <span style={{ display: item?.seleted ? 'flex' : 'none' }} className={styles.cartaoDestaque_nome}>{item?.name}</span>
                                 </div>
-                                <p style={{ display: item?.seleted ? 'flex' : 'none' }} className={styles.cartaoDestaque_descricao}>
-                                    Descubra o universo exclusivo de Mirela Janis, onde sedução, carisma e conteúdos envolventes se encontram.
-                                    Com uma presença magnética e produções de alta qualidade (Ver Mais)
-                                </p>
-                                <span style={{ display: item?.seleted ? 'flex' : 'none' }} className={styles.cartaoDestaque_localizacao}>São Paulo, SP</span>
+                                <p style={{ display: item?.seleted ? 'flex' : 'none' }} className={styles.cartaoDestaque_descricao}>{item?.descricao}</p>
+                                <span style={{ display: item?.seleted ? 'flex' : 'none' }} className={styles.cartaoDestaque_localizacao}>{item?.cidade}, {item?.uf}</span>
                             </div>
                         </div>
                     </div>

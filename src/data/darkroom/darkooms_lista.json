@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "avatar": "/arquivos/darkroom/darkroom_lista/avatar1.png",
+        "titulo": "Casual e Amizades",
+        "descricao": "prática sexual em que casais consensualmente trocam parceiros para relações íntimas, seja na mesma sala ou em ambientes separados. Também pode envolver a participação de um terceiro ou de outros casais.",
+        "membros": 251,
+        "online": 121,
+        "posts": "12k",
+        "privado": true,
+        "entrou": true
+    },
+    {
+        "id": 2,
+        "avatar": "/arquivos/darkroom/darkroom_lista/avatar2.png",
+        "titulo": "Voyeres",
+        "descricao": "prática sexual em que casais consensualmente trocam parceiros para relações íntimas, seja na mesma sala ou em ambientes separados. Também pode envolver a participação de um terceiro ou de outros casais.",
+        "membros": 251,
+        "online": 121,
+        "posts": "12k",
+        "privado": true,
+        "entrou": true
+    },
+    {
+        "id": 3,
+        "avatar": "/arquivos/darkroom/darkroom_lista/avatar3.png",
+        "titulo": "Cruising",
+        "descricao": "prática sexual em que casais consensualmente trocam parceiros para relações íntimas, seja na mesma sala ou em ambientes separados. Também pode envolver a participação de um terceiro ou de outros casais.",
+        "membros": 251,
+        "online": 121,
+        "posts": "12k",
+        "privado": true,
+        "entrou": false
+    },
+    {
+        "id": 4,
+        "avatar": "/arquivos/darkroom/darkroom_lista/avatar4.png",
+        "titulo": "Swing",
+        "descricao": "prática sexual em que casais consensualmente trocam parceiros para relações íntimas, seja na mesma sala ou em ambientes separados. Também pode envolver a participação de um terceiro ou de outros casais.",
+        "membros": 251,
+        "online": 121,
+        "posts": "12k",
+        "privado": false,
+        "entrou": false
+    },
+    {
+        "id": 5,
+        "avatar": "/arquivos/darkroom/darkroom_lista/avatar5.png",
+        "titulo": "Voyeres",
+        "descricao": "prática sexual em que casais consensualmente trocam parceiros para relações íntimas, seja na mesma sala ou em ambientes separados. Também pode envolver a participação de um terceiro ou de outros casais.",
+        "membros": 251,
+        "online": 121,
+        "posts": "12k",
+        "privado": true,
+        "entrou": true
+    },
+    {
+        "id": 6,
+        "avatar": "/arquivos/darkroom/darkroom_lista/avatar6.png",
+        "titulo": "Cruising",
+        "descricao": "prática sexual em que casais consensualmente trocam parceiros para relações íntimas, seja na mesma sala ou em ambientes separados. Também pode envolver a participação de um terceiro ou de outros casais.",
+        "membros": 251,
+        "online": 121,
+        "posts": "12k",
+        "privado": true,
+        "entrou": false
+    },
+    {
+        "id": 7,
+        "avatar": "/arquivos/darkroom/darkroom_lista/avatar7.png",
+        "titulo": "Swing",
+        "descricao": "prática sexual em que casais consensualmente trocam parceiros para relações íntimas, seja na mesma sala ou em ambientes separados. Também pode envolver a participação de um terceiro ou de outros casais.",
+        "membros": 251,
+        "online": 121,
+        "posts": "12k",
+        "privado": false,
+        "entrou": false
+    }
+]

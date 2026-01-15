@@ -1,20 +1,19 @@
 import icones from '../assets/icones';
 import styles from './ProfileSocialBar.module.scss';
-const ProfileSocialBar = () => {
+const ProfileSocialBar = ({ tags, rede_social }) => {
+    const openLink = (link) => {
+        window.open(link);
+    }
+
     return (
         <div className={styles.profile_extras}>
             <div className={styles.profile_tags}>
                 <span className={styles.profile_tags_title}>Tags do Perfil</span>
 
                 <div className={styles.profile_tags_list}>
-                    <span className={styles.profile_tag_item}>Amizade</span>
-                    <span className={styles.profile_tag_item}>Ruiva</span>
-                    <span className={styles.profile_tag_item}>Praia</span>
-                    <span className={styles.profile_tag_item}>LifeStyle</span>
-                    <span className={styles.profile_tag_item}>Dinheiro</span>
-                    <span className={styles.profile_tag_item}>Novinha</span>
-                    <span className={styles.profile_tag_item}>Cruising</span>
-                    <span className={styles.profile_tag_item}>Público</span>
+                    {tags?.map((item) => (
+                        <span key={item?.id} className={styles.profile_tag_item}>{item?.descricao}</span>
+                    ))}
                 </div>
             </div>
 
@@ -22,10 +21,21 @@ const ProfileSocialBar = () => {
                 <span className={styles.profile_social_title}>Siga-me</span>
 
                 <div className={styles.profile_social_list}>
-                    <span className={styles.profile_social_icon}>{icones.twitter}</span>
-                    <span className={styles.profile_social_icon}>{icones.instagram}</span>
-                    <span className={styles.profile_social_icon}>{icones.whatsapp}</span>
-                    <span className={styles.profile_social_icon}>{icones.telegram}</span>
+                    {rede_social?.map((item) => (
+                        <span
+                            onClick={() => openLink(item?.link)}
+                            key={item?.codigo}
+                            className={styles.profile_social_icon}
+                        >
+                            {
+                                item?.codigo === 1 ? icones.twitter :
+                                    item?.codigo === 2 ? icones.instagram :
+                                        item?.codigo === 3 ? icones.whatsapp :
+                                            icones.telegram
+                            }
+                        </span>
+
+                    ))}
 
                     <div className={styles.profile_social_divider} />
 

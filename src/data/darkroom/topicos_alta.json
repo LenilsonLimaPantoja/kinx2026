@@ -1,0 +1,350 @@
+[
+    {
+        "id": 1,
+        "titulo": "Straight World",
+        "topicos": [
+            {
+                "id": 1,
+                "avatar": "/arquivos/darkroom/topicos_alta/1/avatar1.png",
+                "titulo": "Casual e Amizades",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 251,
+                "privado": true
+            },
+            {
+                "id": 2,
+                "avatar": "/arquivos/darkroom/topicos_alta/1/avatar2.png",
+                "titulo": "Relacionamento Sério",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": false
+            },
+            {
+                "id": 3,
+                "avatar": "/arquivos/darkroom/topicos_alta/1/avatar3.png",
+                "titulo": "Apenas Jovens",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 4,
+                "avatar": "/arquivos/darkroom/topicos_alta/1/avatar4.png",
+                "titulo": "Apenas Jovens",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 5,
+                "avatar": "/arquivos/darkroom/topicos_alta/1/avatar5.png",
+                "titulo": "After Party",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 6,
+                "avatar": "/arquivos/darkroom/topicos_alta/1/avatar6.png",
+                "titulo": "Off Road ",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 7,
+                "avatar": "/arquivos/darkroom/topicos_alta/1/avatar7.png",
+                "titulo": "Baguncinha",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 8,
+                "avatar": "/arquivos/darkroom/topicos_alta/1/avatar8.png",
+                "titulo": "Swing Partys",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": false
+            },
+            {
+                "id": 9,
+                "avatar": "/arquivos/darkroom/topicos_alta/1/avatar9.png",
+                "titulo": "Héteros Cis",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 165,
+                "privado": false
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "titulo": "Vale dos Homens",
+        "topicos": [
+            {
+                "id": 1,
+                "avatar": "/arquivos/darkroom/topicos_alta/2/avatar1.png",
+                "titulo": "Casual e Amizades",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 251,
+                "privado": true
+            },
+            {
+                "id": 2,
+                "avatar": "/arquivos/darkroom/topicos_alta/2/avatar2.png",
+                "titulo": "Relacionamento Sério",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": false
+            },
+            {
+                "id": 3,
+                "avatar": "/arquivos/darkroom/topicos_alta/2/avatar3.png",
+                "titulo": "Apenas Jovens",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 4,
+                "avatar": "/arquivos/darkroom/topicos_alta/2/avatar4.png",
+                "titulo": "Apenas Jovens",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 5,
+                "avatar": "/arquivos/darkroom/topicos_alta/2/avatar5.png",
+                "titulo": "After Party",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 6,
+                "avatar": "/arquivos/darkroom/topicos_alta/2/avatar6.png",
+                "titulo": "Off Road ",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 7,
+                "avatar": "/arquivos/darkroom/topicos_alta/2/avatar7.png",
+                "titulo": "Baguncinha",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 8,
+                "avatar": "/arquivos/darkroom/topicos_alta/2/avatar8.png",
+                "titulo": "Swing Partys",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": false
+            },
+            {
+                "id": 9,
+                "avatar": "/arquivos/darkroom/topicos_alta/2/avatar9.png",
+                "titulo": "Héteros Cis",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 165,
+                "privado": false
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "titulo": "Só Elas",
+        "topicos": [
+            {
+                "id": 1,
+                "avatar": "/arquivos/darkroom/topicos_alta/3/avatar1.png",
+                "titulo": "Casual e Amizades",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 251,
+                "privado": true
+            },
+            {
+                "id": 2,
+                "avatar": "/arquivos/darkroom/topicos_alta/3/avatar2.png",
+                "titulo": "Relacionamento Sério",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": false
+            },
+            {
+                "id": 3,
+                "avatar": "/arquivos/darkroom/topicos_alta/3/avatar3.png",
+                "titulo": "Apenas Jovens",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 4,
+                "avatar": "/arquivos/darkroom/topicos_alta/3/avatar4.png",
+                "titulo": "Apenas Jovens",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 5,
+                "avatar": "/arquivos/darkroom/topicos_alta/3/avatar5.png",
+                "titulo": "After Party",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 6,
+                "avatar": "/arquivos/darkroom/topicos_alta/3/avatar6.png",
+                "titulo": "Off Road ",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 7,
+                "avatar": "/arquivos/darkroom/topicos_alta/3/avatar7.png",
+                "titulo": "Baguncinha",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 8,
+                "avatar": "/arquivos/darkroom/topicos_alta/3/avatar8.png",
+                "titulo": "Swing Partys",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": false
+            },
+            {
+                "id": 9,
+                "avatar": "/arquivos/darkroom/topicos_alta/3/avatar9.png",
+                "titulo": "Héteros Cis",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 165,
+                "privado": false
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "titulo": "Transex",
+        "topicos": [
+            {
+                "id": 1,
+                "avatar": "/arquivos/darkroom/topicos_alta/4/avatar1.png",
+                "titulo": "Casual e Amizades",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 251,
+                "privado": true
+            },
+            {
+                "id": 2,
+                "avatar": "/arquivos/darkroom/topicos_alta/4/avatar2.png",
+                "titulo": "Relacionamento Sério",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": false
+            },
+            {
+                "id": 3,
+                "avatar": "/arquivos/darkroom/topicos_alta/4/avatar3.png",
+                "titulo": "Apenas Jovens",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 4,
+                "avatar": "/arquivos/darkroom/topicos_alta/4/avatar4.png",
+                "titulo": "Apenas Jovens",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 5,
+                "avatar": "/arquivos/darkroom/topicos_alta/4/avatar5.png",
+                "titulo": "After Party",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 6,
+                "avatar": "/arquivos/darkroom/topicos_alta/4/avatar6.png",
+                "titulo": "Off Road ",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 7,
+                "avatar": "/arquivos/darkroom/topicos_alta/4/avatar7.png",
+                "titulo": "Baguncinha",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": true
+            },
+            {
+                "id": 8,
+                "avatar": "/arquivos/darkroom/topicos_alta/4/avatar8.png",
+                "titulo": "Swing Partys",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 180,
+                "privado": false
+            },
+            {
+                "id": 9,
+                "avatar": "/arquivos/darkroom/topicos_alta/4/avatar9.png",
+                "titulo": "Héteros Cis",
+                "subtitulo": "Héteros Cis",
+                "rota": "/darkrooms",
+                "membros": 165,
+                "privado": false
+            }
+        ]
+    }
+]
