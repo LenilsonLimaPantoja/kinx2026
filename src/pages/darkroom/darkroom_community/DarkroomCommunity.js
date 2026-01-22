@@ -10,7 +10,8 @@ import Header from '../../../components/Header';
 import PostsCards from '../../../components/PostsCards';
 import icones from '../../../assets/icones';
 import Loading from '../../../components/Loading';
-import feed_principal from '../../../arquivos/feed_principal.png';
+import agora from '../../../data/darkroom/feed_agora.json';
+import tipo from '../../../data/darkroom/tipo.json';
 
 const DarkroomCommunity = () => {
     const [btnAtivo, setBtnAtivo] = useState(1);
@@ -46,12 +47,12 @@ const DarkroomCommunity = () => {
             }
             {/* aqui eu devo fazer um ajuste, pois o cabeçalho não é esse */}
             <Header logado={true} />
-            <TipoDarkroom />
+            <TipoDarkroom tipo={tipo}/>
             <EventosPrincipais />
             <FeedNavbar btnAtivo={btnAtivo} setBtnAtivo={setBtnAtivo} botoes={botoes} />
             <div className={styles.area_body}>
                 {btnAtivo === 1 ?
-                    <PostsCards img={feed_principal}/>
+                    <PostsCards posts={agora}/>
                     :
                     btnAtivo === 2 ?
                         <EventosFeed />

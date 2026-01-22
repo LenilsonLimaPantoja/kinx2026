@@ -1,0 +1,95 @@
+[
+    {
+        "id": 1,
+        "avatar": "/arquivos/darkroom/feed/agora/avatar.png",
+        "post": "/arquivos/darkroom/feed/agora/post1.png",
+        "titulo": "@JamesBuoaXL",
+        "tempo_ativo": "08 Minutos Atrás",
+        "descricao": "Estou em busca de amizades e de conhecer pessoas interessantes. Caso tenha interesse, mande uma mensagem na DM.",
+        "temporario": true,
+        "curtidas": 157,
+        "curtida_status": true,
+        "comentarios": 22,
+        "entrou": false,
+        "tags": [
+            {
+                "id": 1,
+                "descricao": "Solteira"
+            },
+            {
+                "id": 2,
+                "descricao": "Animada"
+            },
+            {
+                "id": 3,
+                "descricao": "Animais"
+            },
+            {
+                "id": 4,
+                "descricao": "Madura"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "avatar": "/arquivos/darkroom/feed/agora/avatar.png",
+        "post": "/arquivos/darkroom/feed/agora/post2.png",
+        "titulo": "@JamesBuoaXL",
+        "tempo_ativo": "08 minutos atrás",
+        "descricao": "Estou em busca de amizades e de conhecer pessoas interessantes. Caso tenha interesse, mande uma mensagem na DM.",
+        "temporario": true,
+        "curtidas": 157,
+        "curtida_status": true,
+        "comentarios": 22,
+        "entrou": true,
+        "tags": [
+            {
+                "id": 1,
+                "descricao": "Solteira"
+            },
+            {
+                "id": 2,
+                "descricao": "Animada"
+            },
+            {
+                "id": 3,
+                "descricao": "Animais"
+            },
+            {
+                "id": 4,
+                "descricao": "Madura"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "avatar": "/arquivos/darkroom/feed/agora/avatar.png",
+        "post": "/arquivos/darkroom/feed/agora/post3.png",
+        "titulo": "@JamesBuoaXL",
+        "tempo_ativo": "08 minutos atrás",
+        "descricao": "Estou em busca de amizades e de conhecer pessoas interessantes. Caso tenha interesse, mande uma mensagem na DM.",
+        "temporario": false,
+        "curtidas": 157,
+        "curtida_status": true,
+        "comentarios": 22,
+        "entrou": false,
+        "tags": [
+            {
+                "id": 1,
+                "descricao": "Solteira"
+            },
+            {
+                "id": 2,
+                "descricao": "Animada"
+            },
+            {
+                "id": 3,
+                "descricao": "Animais"
+            },
+            {
+                "id": 4,
+                "descricao": "Madura"
+            }
+        ]
+    }
+]
